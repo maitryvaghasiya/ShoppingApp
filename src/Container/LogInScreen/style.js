@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
         bottom: -100,
     },
     SingUPText: {
-        color: 'gray',
+        color: '#9C9C9B',
     },
     SingUPText1: {
 
@@ -117,8 +117,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         marginTop: 30,
         marginBottom: 30,
-        flexDirection:"row",
-        paddingLeft:10
+        flexDirection: "row",
+        paddingLeft: 10
 
     },
     heading: {
@@ -126,10 +126,10 @@ const styles = StyleSheet.create({
         letterSpacing: 3,
         fontWeight: "900",
         color: "#047BD5",
-        
+
     },
-    backIcon:{
-        marginRight:10
+    backIcon: {
+        marginRight: 10
     }
 })
 

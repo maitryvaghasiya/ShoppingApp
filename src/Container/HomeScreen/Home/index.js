@@ -42,7 +42,7 @@ const HomeScreen = ({navigation}) => {
         }
 
     ]
-
+    
     const ClothDAta = ({ item }) => {
         console.log("item");
         return (

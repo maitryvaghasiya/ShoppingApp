@@ -12,7 +12,6 @@ import NotificationScreen from '../Container/HomeScreen/Notification';
 import AccountScreen from '../Container/HomeScreen/Account';
 import CartScreen from '../Container/HomeScreen/Cart';
 
-
 const Stack = createNativeStackNavigator();
 
 function LogInStack() {
