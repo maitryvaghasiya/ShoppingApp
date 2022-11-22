@@ -164,7 +164,7 @@ const CategoryScreen = () => {
         },
         {
             id: 5,
-            image: require('../../../Resources/Images/travel.png'),
+            image: require('../../../Resources/Images/suitcase.png'),
             detail: 'Travel Store',
             text:"See the world with ease"
         },
