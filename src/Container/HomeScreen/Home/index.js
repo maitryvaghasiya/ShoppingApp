@@ -1,24 +1,28 @@
 import { View, Text, Image, ScrollView, TextInput, TouchableOpacity, FlatList } from 'react-native'
 import React, { useState } from 'react'
-
 import styles from './style';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Feather from 'react-native-vector-icons/Feather';
+import { SliderBox } from "react-native-image-slider-box";
 
 const HomeScreen = ({ navigation }) => {
-    const DATA = [
+
+    const Facilities = [
         {
             id: 1,
             image: require('../../../Resources/Images/coin.png'),
-            product: 'coin',
+            product: 'Coin',
         },
         {
             id: 2,
             image: require('../../../Resources/Images/coupon.png'),
-            product: 'coupen',
+            product: 'Coupon',
         },
         {
             id: 3,
             image: require('../../../Resources/Images/credit-card.png'),
-            product: 'credit',
+            product: 'Credit',
         },
         {
             id: 4,
@@ -28,25 +32,25 @@ const HomeScreen = ({ navigation }) => {
         {
             id: 5,
             image: require('../../../Resources/Images/whats-new.png'),
-            product: 'Whats New?',
+            product: 'New',
         },
         {
             id: 6,
             image: require('../../../Resources/Images/camera.png'),
-            product: 'heels',
+            product: 'Camera',
         },
         {
             id: 7,
-            image: require('../../../Resources/Images/game-control.png'),
-            product: 'westen',
-        }
+            image: require('../../../Resources/Images/game.png'),
+            product: 'Game',
+        },
 
     ]
 
-    const ClothDAta = ({ item }) => {
+    const FacilitiesData = ({ item }) => {
         // console.log("item");
         return (
-                <View>
+            <View>
                 <TouchableOpacity>
                     <View style={styles.Pricecard}>
                         <Image source={item.image} style={styles.TopImg} />
@@ -55,57 +59,73 @@ const HomeScreen = ({ navigation }) => {
                         <Text style={styles.Imgtext}>{item.product} </Text>
                     </View>
                 </TouchableOpacity>
-                </View>
+            </View>
         )
-    }  
+    }
 
     const DATA1 = [
         {
             id: 1,
-            image1: require('../../../Resources/Images/grocery.jpeg'),
-            product1: 'coin',
+            image: require('../../../Resources/Images/grocery.jpeg'),
+            product: 'Coin',
         },
         {
             id: 2,
-            image1: require('../../../Resources/Images/watch.jpeg'),
-            product1: 'coupen',
+            image: require('../../../Resources/Images/watch.jpeg'),
+            product: 'Coupon',
         },
         {
             id: 3,
-            image1: require('../../../Resources/Images/earpodes.webp'),
-            product1: 'credit',
+            image: require('../../../Resources/Images/airpod.jpeg'),
+            product: 'Credit',
         },
-       
+
     ]
-
-   
-
-    const ClothDAta1= ({ item }) => {
+    const ClothDAta1 = ({ item }) => {
         // console.log("item");
         return (
-            <TouchableOpacity>
-            <View  style={styles.FlatList1}>
-            <Image source={item.image1} style={styles.TopImg1} />
-            </View>
+            <TouchableOpacity style={styles.imgBox}> 
+                    <Image source={item.image} style={styles.TopImg1} />
             </TouchableOpacity>
         )
-
     }
     return (
         <View style={styles.container}>
+
             <View style={styles.screen}>
-                <View>
-                    <FlatList
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
-                        data={DATA}
-                        renderItem={ClothDAta}
-                        keyExtractor={item => item.id}
-                    />
+                <View style={styles.headName}>
+                    <View style={styles.searchBar}>
+                        <View>
+                            <TouchableOpacity style={styles.iconSearch}>
+                                <AntDesign name='search1' color={"#047BD5"} style={styles.searchIcon} />
+                                <Text>Search for products</Text>
+                            </TouchableOpacity>                       
+                        </View>
+                        <View style={styles.icon2Des}>
+                            <TouchableOpacity >
+                                <FontAwesome name='microphone' color={"#047BD5"} style={styles.miceIcon} />
+                            </TouchableOpacity>
+                            <TouchableOpacity >
+                                <Feather name='camera' color={"#047BD5"} style={styles.miceIcon} />
+                            </TouchableOpacity>
+                        </View>
+                    </View>
                 </View>
                 <View>
                     <FlatList
+                        
                         horizontal
+                        showsHorizontalScrollIndicator={false}
+                        data={Facilities}
+                        renderItem={FacilitiesData}
+                        keyExtractor={item => item.id}
+                    />
+                </View>
+
+                <View>
+                    <FlatList
+                    numColumns={3}
+                        // horizontal
                         showsHorizontalScrollIndicator={false}
                         data={DATA1}
                         renderItem={ClothDAta1}
