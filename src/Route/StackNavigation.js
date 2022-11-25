@@ -11,6 +11,8 @@ import CategoryScreen from '../Container/HomeScreen/Category';
 import NotificationScreen from '../Container/HomeScreen/Notification';
 import AccountScreen from '../Container/HomeScreen/Account';
 import CartScreen from '../Container/HomeScreen/Cart';
+import SearchScreen from '../Container/HomeScreen/SearchScreen';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -39,6 +41,7 @@ function HomeScreenStack() {
                 screenOptions={{ headerShown: false }}
             >
                 <Stack.Screen name="HomeScrn" component={HomeScreen} />
+                <Stack.Screen name="SearchScrn" component={SearchScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );
@@ -51,6 +54,7 @@ function CategoryStack() {
                 screenOptions={{ headerShown: false }}
             >
                 <Stack.Screen name="CategoryScrn" component={CategoryScreen} />
+                <Stack.Screen name="SearchScrn" component={SearchScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );
@@ -76,6 +80,7 @@ function AccountStack() {
                 screenOptions={{ headerShown: false }}
             >
                 <Stack.Screen name="AccScrn" component={AccountScreen} />
+                <Stack.Screen name="SearchScrn" component={SearchScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );

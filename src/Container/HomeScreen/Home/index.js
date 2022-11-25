@@ -1,5 +1,5 @@
 import { View, Text, Image, ScrollView, TextInput, TouchableOpacity, FlatList } from 'react-native'
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './style';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -44,7 +44,6 @@ const HomeScreen = ({ navigation }) => {
             image: require('../../../Resources/Images/game.png'),
             product: 'Game',
         },
-
     ]
 
     const FacilitiesData = ({ item }) => {
@@ -63,7 +62,7 @@ const HomeScreen = ({ navigation }) => {
         )
     }
 
-    const DATA1 = [
+    const DailyUpdate = [
         {
             id: 1,
             image: require('../../../Resources/Images/grocery.jpeg'),
@@ -79,9 +78,9 @@ const HomeScreen = ({ navigation }) => {
             image: require('../../../Resources/Images/airpod.jpeg'),
             product: 'Credit',
         },
-
     ]
-    const ClothDAta1 = ({ item }) => {
+
+    const DailyUpdateData = ({ item }) => {
         // console.log("item");
         return (
             <TouchableOpacity style={styles.imgBox}> 
@@ -89,14 +88,14 @@ const HomeScreen = ({ navigation }) => {
             </TouchableOpacity>
         )
     }
+
     return (
         <View style={styles.container}>
-
             <View style={styles.screen}>
                 <View style={styles.headName}>
                     <View style={styles.searchBar}>
                         <View>
-                            <TouchableOpacity style={styles.iconSearch}>
+                            <TouchableOpacity style={styles.iconSearch} onPress={() => navigation.navigate('SearchScrn')}>
                                 <AntDesign name='search1' color={"#047BD5"} style={styles.searchIcon} />
                                 <Text>Search for products</Text>
                             </TouchableOpacity>                       
@@ -111,6 +110,7 @@ const HomeScreen = ({ navigation }) => {
                         </View>
                     </View>
                 </View>
+                
                 <View>
                     <FlatList
                         
@@ -127,8 +127,8 @@ const HomeScreen = ({ navigation }) => {
                     numColumns={3}
                         // horizontal
                         showsHorizontalScrollIndicator={false}
-                        data={DATA1}
-                        renderItem={ClothDAta1}
+                        data={DailyUpdate}
+                        renderItem={DailyUpdateData}
                         keyExtractor={item => item.id}
                     />
                 </View>
