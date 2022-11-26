@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { View, Text, Image, ScrollView, TextInput, TouchableOpacity, FlatList, Dimensions  } from 'react-native'
 import React, { useState } from 'react'
+=======
+import { View, Text, Image, ScrollView, TextInput, TouchableOpacity, FlatList } from 'react-native'
+import React from 'react'
+>>>>>>> origin/addcartpage
 import styles from './style';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -46,7 +51,6 @@ const HomeScreen = ({ navigation }) => {
             image: require('../../../Resources/Images/game.png'),
             product: 'Game',
         },
-
     ]
 
     const FacilitiesData = ({ item }) => {
@@ -65,7 +69,7 @@ const HomeScreen = ({ navigation }) => {
         )
     }
 
-    const DATA1 = [
+    const DailyUpdate = [
         {
             id: 1,
             image: require('../../../Resources/Images/grocery.jpeg'),
@@ -81,9 +85,9 @@ const HomeScreen = ({ navigation }) => {
             image: require('../../../Resources/Images/airpod.jpeg'),
             product: 'Credit',
         },
-
     ]
-    const ClothDAta1 = ({ item }) => {
+
+    const DailyUpdateData = ({ item }) => {
         // console.log("item");
         return (
             <TouchableOpacity style={styles.imgBox}> 
@@ -91,6 +95,7 @@ const HomeScreen = ({ navigation }) => {
             </TouchableOpacity>
         )
     }
+<<<<<<< HEAD
         const images = [
             "https://www.creativefabrica.com/wp-content/uploads/2021/04/26/Creative-Fashion-Sale-Banner-Graphics-11345601-1-1-580x387.jpg",
             "https://www.excelebiz.in/wp-content/uploads/2018/05/banner-1024x427.jpg",
@@ -102,14 +107,20 @@ const HomeScreen = ({ navigation }) => {
         ]
             
     
+=======
+
+>>>>>>> origin/addcartpage
     return (
         <View style={styles.container}>
-
             <View style={styles.screen}>
                 <View style={styles.headName}>
                     <View style={styles.searchBar}>
                         <View>
+<<<<<<< HEAD
                             <TextInput style={styles.iconSearch}>
+=======
+                            <TouchableOpacity style={styles.iconSearch} onPress={() => navigation.navigate('SearchScrn')}>
+>>>>>>> origin/addcartpage
                                 <AntDesign name='search1' color={"#047BD5"} style={styles.searchIcon} />
                                 <Text>Search for products</Text>
                             </TextInput>                       
@@ -124,11 +135,15 @@ const HomeScreen = ({ navigation }) => {
                         </View>
                     </View>
                 </View>
+<<<<<<< HEAD
                 </View>
                 <View>
                 <ImageSlider images={images} />
                 </View>
                
+=======
+                
+>>>>>>> origin/addcartpage
                 <View>
                     <FlatList
                         
@@ -145,8 +160,8 @@ const HomeScreen = ({ navigation }) => {
                     numColumns={3}
                         // horizontal
                         showsHorizontalScrollIndicator={false}
-                        data={DATA1}
-                        renderItem={ClothDAta1}
+                        data={DailyUpdate}
+                        renderItem={DailyUpdateData}
                         keyExtractor={item => item.id}
                     />
                 </View>

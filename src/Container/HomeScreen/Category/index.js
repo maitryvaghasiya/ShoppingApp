@@ -1,14 +1,10 @@
-import { Text, View, ScrollView, TouchableOpacity, FlatList, TouchableWithoutFeedback, TouchableHighlight, StatusBar, Image, } from "react-native";
+import { Text, View, ScrollView, TouchableOpacity, FlatList, StatusBar, Image } from "react-native";
 import styles from './style';
-import Feather from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import Entypo from 'react-native-vector-icons/Entypo';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const CategoryScreen = () => {
+const CategoryScreen = ({navigation}) => {
 
     const Category = [
         {
@@ -177,7 +173,7 @@ const CategoryScreen = () => {
     ]
 
     const TrendingData = ({ item }) => {
-        // console.log("item");
+
         return (
             <TouchableOpacity style={styles.trendingBox}>
                 <View style={styles.trendImgCard}>
@@ -191,6 +187,7 @@ const CategoryScreen = () => {
             </TouchableOpacity>
         )
     }
+
     return (
         <View style={styles.container}>
             <StatusBar
@@ -200,7 +197,7 @@ const CategoryScreen = () => {
             <View style={styles.headName}>
                 <Text style={styles.headText}>All Categoris</Text>
                 <View style={styles.iconDes}>
-                    <TouchableOpacity >
+                    <TouchableOpacity onPress={() => navigation.navigate('SearchScrn')}>
                         <AntDesign name='search1' color={"#fff"} style={styles.searchIcon} />
                     </TouchableOpacity>
                     <TouchableOpacity >
@@ -211,7 +208,6 @@ const CategoryScreen = () => {
             <ScrollView style={styles.screen}>
                 <View >
                     <FlatList
-                        // horizontal
                         numColumns={4}
                         showsHorizontalScrollIndicator={false}
                         data={Category}
@@ -219,13 +215,14 @@ const CategoryScreen = () => {
                         keyExtractor={item => item.id}
                     />
                 </View>
+
                 <View style={styles.border}></View>
                 <View>
                     <Text style={styles.moreHead}>More on Flipkart</Text>
                 </View>
+
                 <View >
                     <FlatList
-                        // horizontal
                         numColumns={4}
                         showsHorizontalScrollIndicator={false}
                         data={Facilities}
@@ -233,13 +230,14 @@ const CategoryScreen = () => {
                         keyExtractor={item => item.id}
                     />
                 </View>
+
                 <View style={styles.border}></View>
                 <View>
                     <Text style={styles.moreHead}>Trending Store</Text>
                 </View>
+
                 <View >
                     <FlatList
-                        // horizontal
                         numColumns={2}
                         showsHorizontalScrollIndicator={false}
                         data={Trending}
@@ -247,6 +245,7 @@ const CategoryScreen = () => {
                         keyExtractor={item => item.id}
                     />
                 </View>
+                
             </ScrollView>
         </View>
 

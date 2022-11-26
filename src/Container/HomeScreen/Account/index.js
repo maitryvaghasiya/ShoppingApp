@@ -32,6 +32,7 @@ const AccountScreen = ({ navigation }) => {
       name: 'Help Center',
     },
   ]
+
   const OptionData = ({ item }) => {
     // console.log("item");
     return (
@@ -189,11 +190,11 @@ const AccountScreen = ({ navigation }) => {
     <ScrollView style={styles.container}>
       <StatusBar
         animated={true}
-        backgroundColor="#047BD5" 
-        />
+        backgroundColor="#047BD5"
+      />
       <View style={styles.headName}>
         <Text style={styles.headText}>My Account</Text>
-        <TouchableOpacity >
+        <TouchableOpacity onPress={() => navigation.navigate('SearchScrn')}>
           <AntDesign name='search1' color={"#fff"} style={styles.searchIcon} />
         </TouchableOpacity>
       </View>

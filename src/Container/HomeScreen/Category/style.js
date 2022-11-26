@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
         fontWeight:"900",
         position:"absolute",
         top:-2,
-        left:120,   
+        left:110,   
     },
     detailText:{
         color: 'black',
@@ -117,6 +117,7 @@ const styles = StyleSheet.create({
         position:"absolute",   
         top:45,
         left:20, 
+        flexWrap:"wrap"
     }
 })
 export default styles
