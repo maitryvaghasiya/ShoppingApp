@@ -7,42 +7,44 @@ const styles = StyleSheet.create({
         width: "100%"
     },
     screen: {
-        margin: 16,
-        flex: 1,
+        // margin: 16,
+        marginRight: 16,
+        marginLeft: 16
+        // flex: 1,
     },
     headName: {
         flexDirection: 'row',
         alignItems: "center",
         backgroundColor: "#E8E9E9",
-        paddingBottom: 15,
-        paddingTop: 15,
         justifyContent: "space-between",
         paddingLeft: 16,
-        paddingRight: 16
+        paddingRight: 16,
+        marginTop: 16,
+        borderRadius: 5,
+      
     },
+   
     searchIcon: {
         fontSize: 20,
         color: "#047BD5",
-        marginRight:8
     },
     miceIcon: {
         fontSize: 19,
         marginLeft: 10,
-        alignSelf:"flex-end",
+        alignSelf: "flex-end",
+        marginTop: 15
     },
-    searchBar:{
+    searchBar: {
         flexDirection: "row",
-        justifyContent:"space-between",
+        justifyContent: "space-between",
+
     },
-    iconSearch:{
+    iconSearch: {
         flexDirection: "row",
     },
     icon2Des: {
         flexDirection: "row",
-        // alignSelf:"flex-end",
-        // justifyContent:"flex-end",
-        // alignItems:"flex-end",
-        marginLeft:100
+        marginLeft: 100
     },
     TopImg: {
         height: 40,
@@ -78,7 +80,28 @@ const styles = StyleSheet.create({
         width: "100%",
         alignSelf: 'center',
     },
+    slider: {
+        height: 150,
+        width: 360,
+        marginTop: 20,
+        resizeMode: 'cover',
+        // width:'100%'
+    },
 
+    pagination: {
+        flexDirection: 'row',
+        position: 'absolute',
+        bottom: -15,
+        alignSelf: 'center',
+    },
+    dot: {
+        color: '#888',
+        fontSize: 25,
+    },
+    activeDot: {
+        color: '#FFF',
+        fontSize: 25,
+    },
 })
 
 export default styles;

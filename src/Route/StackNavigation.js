@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LogInScreen from '../Container/LogInScreen';
 import HomeScreen from '../Container/HomeScreen/Home';
 import ForgetPass from '../Container/LogInScreen/ForgetPass/forgetpass';
-import OtpScreen from '../Container/LogInScreen/ForgetPass/otp';
+import OtpScreen, { OTP } from '../Container/LogInScreen/ForgetPass/otp';
 import SignupScreen from '../Container/SignupScreen';
 import CategoryScreen from '../Container/HomeScreen/Category';
 import NotificationScreen from '../Container/HomeScreen/Notification';
@@ -23,7 +23,7 @@ function LogInStack() {
             >
                 <Stack.Screen name="LogInScrn" component={LogInScreen} />
                 <Stack.Screen name="ForgetPassword" component={ForgetPass} />
-                <Stack.Screen name="OtpScrn" component={OtpScreen} />
+                <Stack.Screen name="OtpScrn" component={OTP} />
                 <Stack.Screen name="SignupScreen" component={SignupScreen} />
                 <Stack.Screen name="HomeScrn" component={HomeScreen} />
             </Stack.Navigator>
