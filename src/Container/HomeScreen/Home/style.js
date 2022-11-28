@@ -57,7 +57,6 @@ const styles = StyleSheet.create({
         color: 'black',
         marginLeft: 10
     },
-
     Pricecard: {
         height: 60,
         width: 60,
