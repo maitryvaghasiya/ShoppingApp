@@ -40,8 +40,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
     },
     icon2Des: {
-        flexDirection: "row",
-       
+        flexDirection: "row",   
         marginLeft:100
     },
     TopImg: {

@@ -187,7 +187,7 @@ const AccountScreen = ({ navigation }) => {
   }
 
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <StatusBar
         animated={true}
         backgroundColor="#047BD5"
@@ -199,7 +199,7 @@ const AccountScreen = ({ navigation }) => {
         </TouchableOpacity>
       </View>
 
-      <View style={styles.screen}>
+      <ScrollView style={styles.screen}>
         <View>
           <FlatList
             numColumns={2}
@@ -272,8 +272,8 @@ const AccountScreen = ({ navigation }) => {
             <Text style={styles.logOutText}>Log Out</Text>
           </View>
         </TouchableOpacity>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   )
 }
 

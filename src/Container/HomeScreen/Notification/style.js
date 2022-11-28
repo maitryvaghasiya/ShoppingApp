@@ -6,9 +6,18 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         width: "100%"
     },
-    flexDeraction: {
+    screen: {
+        margin: 16,
+        flex: 1,
+    },
+    notificationBox: {
         flexDirection: 'row',
-        justifyContent:'center'
+        width: "100%",
+        borderWidth: 1,
+        borderColor: "#9C9C9B",
+        marginTop: 5,
+        marginBottom: 5,
+        padding: 5
     },
     headName: {
         flexDirection: 'row',
@@ -16,7 +25,6 @@ const styles = StyleSheet.create({
         backgroundColor: "#047BD5",
         paddingBottom: 15,
         paddingTop: 15,
-        justifyContent: "space-between",
         paddingLeft: 16,
         paddingRight: 16
     },
@@ -25,16 +33,18 @@ const styles = StyleSheet.create({
         fontWeight: "600",
         fontSize: 16
     },
-    offerLogo: {
-        marginLeft: 10,
-        marginRight: 10
-    },
     HeadBox: {
-        width: 210
+        width: "70%",
+        // flexWrap:"wrap"
+    },
+    offerLogo: {
+        marginRight: 5
     },
     LogoImage: {
-        height: 100,
-        width: 100
+        height: 80,
+        width: 80,
+        // justifyContent:"center",
+        // alignItems:"center"
     },
     HeadInfoText: {
         fontSize: 16,
@@ -42,15 +52,11 @@ const styles = StyleSheet.create({
         fontWeight: '600'
     },
     HeadText: {
-        color: '#ABB2B9',
+        color: 'black',
         fontSize: 15,
+
     },
-    line: {
-        borderWidth: 1,
-        width: 340,
-        borderColor: '#D6DBDF',
-        
-    },
+
 });
 
 
