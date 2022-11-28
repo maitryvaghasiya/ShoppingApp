@@ -99,14 +99,14 @@ const NotificationScreen = () => {
                 <Text style={styles.headText}>Notification (9)</Text>
             </View>
 
-            <ScrollView style={styles.screen}>
+            <View style={styles.screen}>
                 <FlatList
-                    showsHorizontalScrollIndicator={false}
+                    showsVerticalScrollIndicator={false}
                     data={Notification}
                     renderItem={NotificationData}
                     keyExtractor={item => item.id}
                 />
-            </ScrollView>
+            </View>
         </View>
     )
 }

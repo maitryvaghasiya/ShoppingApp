@@ -202,6 +202,7 @@ const AccountScreen = ({ navigation }) => {
       <ScrollView style={styles.screen}>
         <View>
           <FlatList
+          showsVerticalScrollIndicator={false}
             numColumns={2}
             data={Option}
             renderItem={OptionData}
