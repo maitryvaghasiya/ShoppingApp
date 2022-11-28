@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
         borderColor: "#9C9C9B",
         marginTop: 5,
         marginBottom: 5,
-        padding: 5
+        padding: 5,
+        borderRadius: 10
     },
     headName: {
         flexDirection: 'row',

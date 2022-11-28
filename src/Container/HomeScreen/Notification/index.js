@@ -89,6 +89,7 @@ const NotificationScreen = () => {
             </View>
         )
     }
+    
     return (
         <View style={styles.container}>
             <StatusBar
