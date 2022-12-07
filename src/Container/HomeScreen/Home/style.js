@@ -25,23 +25,23 @@ const styles = StyleSheet.create({
     searchIcon: {
         fontSize: 20,
         color: "#047BD5",
-        marginRight:8
+        marginRight: 8
     },
     miceIcon: {
         fontSize: 19,
         marginLeft: 10,
-        alignSelf:"flex-end",
+        alignSelf: "flex-end",
     },
-    searchBar:{
+    searchBar: {
         flexDirection: "row",
-        justifyContent:"space-between",
+        justifyContent: "space-between",
     },
-    iconSearch:{
+    iconSearch: {
         flexDirection: "row",
     },
     icon2Des: {
-        flexDirection: "row",   
-        marginLeft:100
+        flexDirection: "row",
+        marginLeft: 100
     },
     TopImg: {
         height: 40,
@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
     },
     Imgtext: {
         textAlign: 'center',
-        fontFamily: 'Montserrat-Bold',
         color: 'black',
         marginLeft: 10
     },
@@ -67,7 +66,7 @@ const styles = StyleSheet.create({
         height: 150,
         width: "31%",
         marginLeft: 5,
-        marginRight:5,
+        marginRight: 5,
         marginTop: 20,
         backgroundColor: '#D6EAF8'
     },
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         bottom: 10,
         alignSelf: 'center',
-        alignItems:"center"
+        alignItems: "center"
     },
     dot: {
         color: '#888',
@@ -95,6 +94,104 @@ const styles = StyleSheet.create({
     activeDot: {
         color: '#047BD5',
         fontSize: 30,
+    },
+    offerBox: {
+        backgroundColor: "pink",
+        marginTop: 10,
+        padding: 10,
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginRight:16,
+        marginLeft:16,
+        borderRadius:10,
+        flexDirection:"row",
+    },
+    offerText: {
+        letterSpacing: 2,
+        fontSize: 16,
+        fontWeight: "900",
+        color:"black"
+    },
+    offerBgBox: {
+        backgroundColor: "#047BD5",
+        marginTop: 10,
+    },
+    b1: {
+        borderWidth: 1,
+        borderColor:"#9C9C9B",
+        marginTop:5
+    },
+    offerImgBox: {
+        height: 150,
+        width: "31%",
+        marginLeft: 5,
+        marginRight: 5,
+        marginTop: 10,
+        marginBottom: 10,
+        backgroundColor: "#fff",
+        borderRadius: 10,
+    },
+    imgOffer: {
+        height: 90,
+        width: "75%",
+        alignSelf: 'center',
+        marginTop: 8
+    },
+    ImgtextOfr: {
+        textAlign: 'center',
+        color: 'black',
+        marginLeft: 10,
+        fontWeight:"700"
+    },
+    nextIcon: {
+        fontSize: 20,
+        color:"black"
+    },
+    primeBox: {
+        marginTop: 10,
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginRight:16,
+        marginLeft:16,
+        borderRadius:10,
+        flexDirection:"row",
+    },
+    primeBgBox:{
+        margin: 10,
+        borderWidth: 1,
+        borderColor:"#9C9C9B",
+        backgroundColor:"#CCD6C3"
+    },
+    primeImgBox: {
+        height: 180,
+        width: "47%",
+        marginLeft: 5,
+        marginRight: 5,
+        marginTop: 10,
+        marginBottom: 10,
+        backgroundColor: "#fff",
+        borderRadius: 10,
+        borderWidth:2,
+        borderColor:"#9C9C9B",
+    },
+    imgPrime: {
+        height: 115,
+        width: "75%",
+        alignSelf: 'center',
+        marginTop: 8
+    },
+    ImgtextOfr: {
+        textAlign: 'center',
+        color: 'black',
+        marginLeft: 10,
+        fontWeight:"700"
+    },
+    ImgtextPrime: {
+        textAlign: 'center',
+        color: '#047BD5',
+        marginLeft: 10,
+        fontWeight:"900",
+        fontSize:16
     },
 })
 

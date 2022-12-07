@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView, TouchableOpacity, FlatList, Dimensions } from 'react-native'
+import { View, Text, Image, ScrollView, TouchableOpacity, FlatList, Dimensions, StatusBar } from 'react-native'
 import React, { useState } from 'react'
 import styles from './style';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -65,7 +65,7 @@ const HomeScreen = ({ navigation }) => {
     const DailyUpdate = [
         {
             id: 1,
-            image: require('../../../Resources/Images/grocery.jpeg'),
+            image: require('../../../Resources/Images/grocery1.jpeg'),
             product: 'Coin',
         },
         {
@@ -98,8 +98,100 @@ const HomeScreen = ({ navigation }) => {
         "https://img.freepik.com/free-psd/horizontal-banner-template-black-friday-clearance_23-2148745446.jpg?w=1060&t=st=1668493058~exp=1668493658~hmac=96080dc6f3b53df993a657f756d2b68017bce5ccc3d4975a3aea36bfdb50d2f8",
     ]
 
+    const OfferUpdate = [
+        {
+            id: 1,
+            image: require('../../../Resources/Images/traditional.png'),
+            product: 'Indian Wear',
+            offeritem: "From Rs.199"
+        },
+        {
+            id: 2,
+            image: require('../../../Resources/Images/makeup.png'),
+            product: 'Beauty',
+            offeritem: "30-70% Off"
+        },
+        {
+            id: 3,
+            image: require('../../../Resources/Images/garment.png'),
+            product: 'Wrangler',
+            offeritem: "Min.70% Off"
+        },
+        {
+            id: 4,
+            image: require('../../../Resources/Images/christmas.png'),
+            product: 'Christmas',
+            offeritem: "From Rs.99"
+        },
+        {
+            id: 5,
+            image: require('../../../Resources/Images/smartphone.png'),
+            product: 'Mobile',
+            offeritem: "0 Cost EMI>"
+        },
+        {
+            id: 6,
+            image: require('../../../Resources/Images/gadget.png'),
+            product: 'Electronics',
+            offeritem: "Up to 80% Off"
+        },
+    ]
+
+    const OfferUpdateData = ({ item }) => {
+        return (
+            <TouchableOpacity style={styles.offerImgBox}>
+                <Image source={item.image} style={styles.imgOffer} />
+                <View style={styles.b1}></View>
+                <Text style={styles.Imgtext}>{item.product} </Text>
+                <Text style={styles.ImgtextOfr}>{item.offeritem} </Text>
+            </TouchableOpacity>
+        )
+    }
+
+    const primiere = [
+        {
+            id: 1,
+            image: require('../../../Resources/Images/smartwatch.png'),
+            product: 'Boat SmartWatch',
+            offeritem: "Most-Loved"
+        },
+        {
+            id: 2,
+            image: require('../../../Resources/Images/hairwig.png'),
+            product: 'Hair Wig',
+            offeritem: "New Range"
+        },
+        {
+            id: 3,
+            image: require('../../../Resources/Images/jeansmen.png'),
+            product: 'Men-s Jeans',
+            offeritem: "Top Collection"
+        },
+        {
+            id: 4,
+            image: require('../../../Resources/Images/rollon.png'),
+            product: 'Roll-ons',
+            offeritem: "Widest Range"
+        },
+    ]
+
+    const primiereData = ({ item }) => {
+        return (
+            <TouchableOpacity style={styles.primeImgBox}>
+                <Image source={item.image} style={styles.imgPrime} />
+                <View style={styles.b1}></View>
+                <Text style={styles.Imgtext}>{item.product} </Text>
+                <Text style={styles.ImgtextPrime}>{item.offeritem} </Text>
+            </TouchableOpacity>
+        )
+    }
+
     return (
         <ScrollView style={styles.container}>
+            <StatusBar
+                animated={true}
+                backgroundColor="#047BD5"
+            />
             <View style={styles.screen}>
                 <View style={styles.headName}>
                     <View style={styles.searchBar}>
@@ -133,7 +225,6 @@ const HomeScreen = ({ navigation }) => {
                     keyExtractor={item => item.id}
                 />
             </View>
-
             <View >
                 <FlatList
                     numColumns={3}
@@ -142,6 +233,41 @@ const HomeScreen = ({ navigation }) => {
                     renderItem={DailyUpdateData}
                     keyExtractor={item => item.id}
                 />
+            </View>
+            <View style={styles.offerBgBox}>
+                <TouchableOpacity style={styles.offerBox}>
+                    <View>
+                        <Text style={styles.offerText}>Shop Before Sale Start</Text>
+                        <Text style={styles.offerText}>Lowest Prices of the Year!</Text>
+                    </View>
+                    <View>
+                        <AntDesign name='caretright' style={styles.nextIcon} />
+                    </View>
+                </TouchableOpacity>
+                <FlatList
+                    numColumns={3}
+                    data={OfferUpdate}
+                    renderItem={OfferUpdateData}
+                    keyExtractor={item => item.id}
+                />
+            </View>
+            <View style={styles.primeBgBox}>
+                <TouchableOpacity style={styles.primeBox}>
+                    <View>
+                        <Text style={styles.offerText}>Top EOSS Selection</Text>
+                    </View>
+                    <View>
+                        <AntDesign name='caretright' style={styles.nextIcon} />
+                    </View>
+                </TouchableOpacity>
+                <View >
+                    <FlatList
+                        numColumns={2}
+                        data={primiere}
+                        renderItem={primiereData}
+                        keyExtractor={item => item.id}
+                    />
+                </View>
             </View>
 
         </ScrollView>
