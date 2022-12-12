@@ -66,17 +66,20 @@ const HomeScreen = ({ navigation }) => {
         {
             id: 1,
             image: require('../../../Resources/Images/grocery1.jpeg'),
-            product: 'Coin',
+            product: 'Grocery',
+            offeritem: "Min.10% Off"
         },
         {
             id: 2,
             image: require('../../../Resources/Images/watch.jpeg'),
-            product: 'Coupon',
+            product: 'Watch',
+            offeritem: "Sale Tomorrow"
         },
         {
             id: 3,
             image: require('../../../Resources/Images/airpod.jpeg'),
-            product: 'Credit',
+            product: 'Earbudz',
+            offeritem: "Up to 50% off"
         },
     ]
 
@@ -85,6 +88,8 @@ const HomeScreen = ({ navigation }) => {
         return (
             <TouchableOpacity style={styles.imgBox}>
                 <Image source={item.image} style={styles.TopImg1} />
+                <Text style={styles.Imgtext}>{item.product} </Text>
+                <Text style={styles.ImgtextOfr}>{item.offeritem} </Text>
             </TouchableOpacity>
         )
     }
@@ -148,7 +153,7 @@ const HomeScreen = ({ navigation }) => {
         )
     }
 
-    const primiere = [
+    const Top = [
         {
             id: 1,
             image: require('../../../Resources/Images/smartwatch.png'),
@@ -175,7 +180,137 @@ const HomeScreen = ({ navigation }) => {
         },
     ]
 
-    const primiereData = ({ item }) => {
+    const TopData = ({ item }) => {
+        return (
+            <TouchableOpacity style={styles.primeImgBox}>
+                <Image source={item.image} style={styles.imgPrime} />
+                <View style={styles.b1}></View>
+                <Text style={styles.Imgtext}>{item.product} </Text>
+                <Text style={styles.ImgtextPrime}>{item.offeritem} </Text>
+            </TouchableOpacity>
+        )
+    }
+
+    const SponserPro = [
+        {
+            id: 1,
+            image: require('../../../Resources/Images/bike.jpeg'),
+            product: 'BikeDekho',
+            offeritem: "Explore Now"
+        },
+        {
+            id: 2,
+            image: require('../../../Resources/Images/card1.webp'),
+            product: 'Get instant',
+            offeritem: "Buy Now"
+        },
+        {
+            id: 3,
+            image: require('../../../Resources/Images/card3.jpeg'),
+            product: 'GiftCard',
+            offeritem: "Buy Now"
+        },
+        {
+            id: 4,
+            image: require('../../../Resources/Images/card2.jpeg'),
+            product: 'Various Price',
+            offeritem: "Buy Now"
+        },
+        {
+            id: 5,
+            image: require('../../../Resources/Images/bike2.jpeg'),
+            product: 'BikeDekho',
+            offeritem: "Explore Now"
+        },
+        {
+            id: 6,
+            image: require('../../../Resources/Images/car1.jpeg'),
+            product: 'CarDekho',
+            offeritem: "Explore Now"
+        },
+    ]
+
+    const SponserProData = ({ item }) => {
+        return (
+            <TouchableOpacity style={styles.sponserImgBox}>
+                <Image source={item.image} style={styles.imgsponser} />
+                <Text style={styles.Imgtext}>{item.product} </Text>
+                <Text style={styles.ImgtextOfr}>{item.offeritem} </Text>
+            </TouchableOpacity>
+        )
+    }
+
+    const MelaOffer = [
+        {
+            id: 1,
+            image: require('../../../Resources/Images/fridge.jpeg'),
+            product: 'Refridgerators',
+            offertext: "No-cost EMI",
+            offeritem: "Min.30% Off",
+
+        },
+        {
+            id: 2,
+            image: require('../../../Resources/Images/storagebox.jpeg'),
+            product: 'Storage Box',
+            offertext: "Best Price",
+            offeritem: "Up to 20% off"
+        },
+        {
+            id: 3,
+            image: require('../../../Resources/Images/kitchenmat.webp'),
+            product: 'Kitchen Mat',
+            offertext: "Metro Living",
+            offeritem: "Min.50% Off"
+        },
+        {
+            id: 4,
+            image: require('../../../Resources/Images/medicinetab.jpeg'),
+            product: 'Medicines',
+            offertext: "Smooth Delivery",
+            offeritem: "Min.30%+1% Cashback"
+        },
+    ]
+
+    const MelaOfferData = ({ item }) => {
+        return (
+            <TouchableOpacity style={styles.melaImgBox}>
+                <Image source={item.image} style={styles.imgMela} />
+                <Text style={styles.Imgtext}>{item.product} </Text>
+                <Text style={styles.Imgtext}>{item.offertext} </Text>
+                <Text style={styles.ImgtextPrime}>{item.offeritem} </Text>
+            </TouchableOpacity>
+        )
+    }
+
+    const PrimeOffer = [
+        {
+            id: 1,
+            image: require('../../../Resources/Images/babywipe.png'),
+            product: 'Baby Wipes',
+            offeritem: "Min.30% off"
+        },
+        {
+            id: 2,
+            image: require('../../../Resources/Images/homefur.png'),
+            product: 'Home Furnishing',
+            offeritem: "Min.50% off"
+        },
+        {
+            id: 3,
+            image: require('../../../Resources/Images/mosquito.png'),
+            product: 'Mosquito Killers',
+            offeritem: "Min.30% off"
+        },
+        {
+            id: 4,
+            image: require('../../../Resources/Images/handbag.png'),
+            product: 'Handbags',
+            offeritem: "Top Collection"
+        },
+    ]
+
+    const PrimeOfferData = ({ item }) => {
         return (
             <TouchableOpacity style={styles.primeImgBox}>
                 <Image source={item.image} style={styles.imgPrime} />
@@ -194,24 +329,25 @@ const HomeScreen = ({ navigation }) => {
             />
             <View style={styles.screen}>
                 <View style={styles.headName}>
-                    <View style={styles.searchBar}>
-                        <View>
-                            <TouchableOpacity style={styles.iconSearch} onPress={() => navigation.navigate('SearchScrn')}>
-                                <AntDesign name='search1' color={"#047BD5"} style={styles.searchIcon} />
-                                <Text>Search for products</Text>
-                            </TouchableOpacity>
-                        </View>
-                        <View style={styles.icon2Des}>
-                            <TouchableOpacity >
-                                <FontAwesome name='microphone' color={"#047BD5"} style={styles.miceIcon} />
-                            </TouchableOpacity>
-                            <TouchableOpacity >
-                                <Feather name='camera' color={"#047BD5"} style={styles.miceIcon} />
-                            </TouchableOpacity>
-                        </View>
+                    <View>
+                        <TouchableOpacity style={styles.iconSearch} onPress={() => navigation.navigate('SearchScrn')}>
+                            <AntDesign name='search1' color={"#047BD5"} style={styles.searchIcon} />
+                            <Text>Search for products</Text>
+                        </TouchableOpacity>
                     </View>
+
+                    <View style={styles.icon2Des}>
+                        <TouchableOpacity >
+                            <FontAwesome name='microphone' color={"#047BD5"} style={styles.miceIcon} />
+                        </TouchableOpacity>
+                        <TouchableOpacity >
+                            <Feather name='camera' color={"#047BD5"} style={styles.miceIcon} />
+                        </TouchableOpacity>
+                    </View>
+
                 </View>
             </View>
+
             <View>
                 <ImageSlider images={images} />
             </View>
@@ -225,6 +361,7 @@ const HomeScreen = ({ navigation }) => {
                     keyExtractor={item => item.id}
                 />
             </View>
+
             <View >
                 <FlatList
                     numColumns={3}
@@ -234,6 +371,7 @@ const HomeScreen = ({ navigation }) => {
                     keyExtractor={item => item.id}
                 />
             </View>
+
             <View style={styles.offerBgBox}>
                 <TouchableOpacity style={styles.offerBox}>
                     <View>
@@ -251,6 +389,7 @@ const HomeScreen = ({ navigation }) => {
                     keyExtractor={item => item.id}
                 />
             </View>
+
             <View style={styles.primeBgBox}>
                 <TouchableOpacity style={styles.primeBox}>
                     <View>
@@ -263,8 +402,50 @@ const HomeScreen = ({ navigation }) => {
                 <View >
                     <FlatList
                         numColumns={2}
-                        data={primiere}
-                        renderItem={primiereData}
+                        data={Top}
+                        renderItem={TopData}
+                        keyExtractor={item => item.id}
+                    />
+                </View>
+            </View>
+
+            <View style={styles.sponsorBgBox}>
+                <View style={styles.sponsorBox}>
+                    <Text style={styles.offerText}>Sponsored</Text>
+                </View>
+                <FlatList
+                    numColumns={3}
+                    data={SponserPro}
+                    renderItem={SponserProData}
+                    keyExtractor={item => item.id}
+                />
+            </View>
+
+            <View >
+                <View >
+                    <FlatList
+                        numColumns={2}
+                        data={MelaOffer}
+                        renderItem={MelaOfferData}
+                        keyExtractor={item => item.id}
+                    />
+                </View>
+            </View>
+
+            <View style={[styles.primeBgBox, { backgroundColor: "#F0AAF0" }]}>
+                <TouchableOpacity style={styles.primeBox}>
+                    <View>
+                        <Text style={styles.offerText}>Shop Monthly Essentials          </Text>
+                    </View>
+                    <View>
+                        <AntDesign name='caretright' style={styles.nextIcon} />
+                    </View>
+                </TouchableOpacity>
+                <View >
+                    <FlatList
+                        numColumns={2}
+                        data={PrimeOffer}
+                        renderItem={PrimeOfferData}
                         keyExtractor={item => item.id}
                     />
                 </View>

@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
         paddingTop: 15,
         justifyContent: "space-between",
         paddingLeft: 16,
-        paddingRight: 16
+        paddingRight: 16,
+        flexDirection: "row",
     },
     searchIcon: {
         fontSize: 20,
@@ -31,17 +32,13 @@ const styles = StyleSheet.create({
         fontSize: 19,
         marginLeft: 10,
         alignSelf: "flex-end",
-    },
-    searchBar: {
-        flexDirection: "row",
-        justifyContent: "space-between",
+        textAlign: "right"
     },
     iconSearch: {
         flexDirection: "row",
     },
     icon2Des: {
         flexDirection: "row",
-        marginLeft: 100
     },
     TopImg: {
         height: 40,
@@ -51,7 +48,7 @@ const styles = StyleSheet.create({
         marginTop: 9
     },
     Imgtext: {
-        textAlign: 'center',
+        // textAlign: 'center',
         color: 'black',
         marginLeft: 10
     },
@@ -101,16 +98,16 @@ const styles = StyleSheet.create({
         padding: 10,
         alignItems: "center",
         justifyContent: "space-between",
-        marginRight:16,
-        marginLeft:16,
-        borderRadius:10,
-        flexDirection:"row",
+        marginRight: 16,
+        marginLeft: 16,
+        borderRadius: 10,
+        flexDirection: "row",
     },
     offerText: {
         letterSpacing: 2,
         fontSize: 16,
         fontWeight: "900",
-        color:"black"
+        color: "black"
     },
     offerBgBox: {
         backgroundColor: "#047BD5",
@@ -118,8 +115,8 @@ const styles = StyleSheet.create({
     },
     b1: {
         borderWidth: 1,
-        borderColor:"#9C9C9B",
-        marginTop:5
+        borderColor: "#9C9C9B",
+        marginTop: 5
     },
     offerImgBox: {
         height: 150,
@@ -141,26 +138,26 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'black',
         marginLeft: 10,
-        fontWeight:"700"
+        fontWeight: "700"
     },
     nextIcon: {
         fontSize: 20,
-        color:"black"
+        color: "black"
     },
     primeBox: {
         marginTop: 10,
         alignItems: "center",
         justifyContent: "space-between",
-        marginRight:16,
-        marginLeft:16,
-        borderRadius:10,
-        flexDirection:"row",
+        marginRight: 16,
+        marginLeft: 16,
+        borderRadius: 10,
+        flexDirection: "row",
     },
-    primeBgBox:{
+    primeBgBox: {
         margin: 10,
         borderWidth: 1,
-        borderColor:"#9C9C9B",
-        backgroundColor:"#CCD6C3"
+        borderColor: "#9C9C9B",
+        backgroundColor: "#AAC7F0"
     },
     primeImgBox: {
         height: 180,
@@ -171,8 +168,8 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         backgroundColor: "#fff",
         borderRadius: 10,
-        borderWidth:2,
-        borderColor:"#9C9C9B",
+        borderWidth: 2,
+        borderColor: "#9C9C9B",
     },
     imgPrime: {
         height: 115,
@@ -181,17 +178,77 @@ const styles = StyleSheet.create({
         marginTop: 8
     },
     ImgtextOfr: {
-        textAlign: 'center',
+        // textAlign: 'center',
         color: 'black',
         marginLeft: 10,
-        fontWeight:"700"
+        fontWeight: "700"
     },
     ImgtextPrime: {
-        textAlign: 'center',
+        // textAlign: 'center',
         color: '#047BD5',
         marginLeft: 10,
-        fontWeight:"900",
-        fontSize:16
+        fontWeight: "900",
+        fontSize: 16
+    },
+    sponsorBgBox: {
+        marginTop: 10,
+    },
+    sponsorBox: {
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginRight: 16,
+        marginLeft: 16,
+        marginBottom: 10,
+        borderRadius: 10,
+        flexDirection: "row",
+    },
+    sponserImgBox: {
+        height: 150,
+        width: "31%",
+        marginLeft: 5,
+        marginRight: 5,
+        marginBottom: 10,
+        backgroundColor: "#fff",
+        borderRadius: 10,
+        borderWidth: 2,
+        borderColor: "#9C9C9B",
+    },
+    imgsponser: {
+        height: 100,
+        width: "100%",
+        alignSelf: 'center',
+    },
+    melaImgBox: {
+        height: 220,
+        width: "47%",
+        marginLeft: 5,
+        marginRight: 5,
+        marginTop: 10,
+        marginBottom: 10,
+        backgroundColor: "#fff",
+        borderRadius: 10,
+        borderWidth: 2,
+        borderColor: "#9C9C9B",
+    },
+    imgMela: {
+        height: 150,
+        width: "100%",
+        alignSelf: 'center',
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10
+    },
+    ImgtextOfr: {
+        // textAlign: 'center',
+        color: 'black',
+        marginLeft: 10,
+        fontWeight: "700"
+    },
+    ImgtextPrime: {
+        // textAlign: 'center',
+        color: '#047BD5',
+        marginLeft: 10,
+        fontWeight: "900",
+        fontSize: 16
     },
 })
 
