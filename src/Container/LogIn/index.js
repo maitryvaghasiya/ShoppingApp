@@ -7,6 +7,7 @@ import styles from './style';
 import Images from '../../Theme/Images';
 
 const LogInScreen = ({ navigation }) => {
+
     const [email, setEmail] = React.useState(null);
     const [password, setPassword] = React.useState(null);
 
@@ -34,7 +35,7 @@ const LogInScreen = ({ navigation }) => {
                         onChangeText={setEmail}
                         value={email}
                         placeholder="Enter your Mobile Number/Email-id"
-                        placeholderTextColor="#FA4A3A3"
+                        placeholderTextColor="#585656"
                     />
                     <View style={styles.passwordBox}>
                         <TextInput
@@ -43,11 +44,11 @@ const LogInScreen = ({ navigation }) => {
                             value={password}
                             placeholder="Enter your Password"
                             secureTextEntry={true}
-                            placeholderTextColor="#FA4A3A3"
+                            placeholderTextColor="#585656"
                         />
                         <TouchableOpacity style={styles.setIconEye} onPress={() => handlePasswordVisibility()}>
                             {/* <Ionicons name="eye-off" size={20} color={'#FA4A3A3'} style={styles.iconEye} /> */}
-                            <Ionicons name="eye" size={20} color={'#FA4A3A3'} style={styles.iconEye} />
+                            <Ionicons name="eye" size={20} color={'#585656'} style={styles.iconEye} />
 
                         </TouchableOpacity>
 
@@ -58,7 +59,7 @@ const LogInScreen = ({ navigation }) => {
                                 <MaterialIcons name='crop-square' style={styles.squarIcon}></MaterialIcons>
                             </TouchableOpacity>
                             <TouchableOpacity>
-                                <Text>Remember Me</Text>
+                                <Text style={{ color: '#585656' }}>Remember Me</Text>
                             </TouchableOpacity>
                         </View>
                         <TouchableOpacity style={styles.forPassView} onPress={() => navigation.navigate('ForgetPassword')}>
@@ -66,7 +67,7 @@ const LogInScreen = ({ navigation }) => {
                         </TouchableOpacity>
                     </View>
                     <View style={styles.ORbox}>
-                        <Text >OR</Text>
+                        <Text style={{ color: '#585656' }}>OR</Text>
                     </View>
                     <View style={styles.IconsBox}>
                         <View>
@@ -77,22 +78,19 @@ const LogInScreen = ({ navigation }) => {
                     </View>
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={() => navigation.navigate('HomeScrn')}
+                        onPress={() => navigation.navigate('Home1')}
                     >
                         <Text style={styles.textStyle}>Log In</Text>
                     </TouchableOpacity>
                     <View style={styles.alreadyAcc}>
                         <Text style={styles.SingUPText}>Didn’t have any account?</Text>
                         <TouchableOpacity
-                        onPress={() => navigation.navigate('SignupScreen')}
+                            onPress={() => navigation.navigate('SignupScrn')}
                         >
                             <Text style={styles.SingUPText1}>  Sign up</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
-
-
-
             </View>
         </View >
     )

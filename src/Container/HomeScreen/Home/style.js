@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
         marginLeft: 5,
         marginRight: 5,
         marginTop: 20,
+        marginBottom:20,
         backgroundColor: '#D6EAF8'
     },
     TopImg1: {
@@ -93,8 +94,10 @@ const styles = StyleSheet.create({
         fontSize: 30,
     },
     offerBox: {
-        backgroundColor: "pink",
+        backgroundColor: "#C8268D",
         marginTop: 10,
+        marginRight: 16,
+        marginLeft: 16,
         padding: 10,
         alignItems: "center",
         justifyContent: "space-between",
@@ -102,6 +105,9 @@ const styles = StyleSheet.create({
         marginLeft: 16,
         borderRadius: 10,
         flexDirection: "row",
+        position: "absolute",
+        top: -40,
+        width: "92%"
     },
     offerText: {
         letterSpacing: 2,
@@ -111,7 +117,8 @@ const styles = StyleSheet.create({
     },
     offerBgBox: {
         backgroundColor: "#047BD5",
-        marginTop: 10,
+        marginTop: 30,
+        paddingTop: 35
     },
     b1: {
         borderWidth: 1,
@@ -142,7 +149,7 @@ const styles = StyleSheet.create({
     },
     nextIcon: {
         fontSize: 20,
-        color: "black"
+        color:"black"
     },
     primeBox: {
         marginTop: 10,

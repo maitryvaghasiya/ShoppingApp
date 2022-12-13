@@ -17,14 +17,12 @@ const styles = StyleSheet.create({
         marginBottom: 30,
         flexDirection:"row",
         paddingLeft:10
-
     },
     heading: {
         fontSize: 20,
-        letterSpacing: 3,
+        letterSpacing: 2,
         fontWeight: "900",
-        color: "#047BD5",
-        
+        color: "#047BD5",    
     },
     backIcon:{
         marginRight:10
@@ -51,13 +49,13 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         position: "absolute",
         bottom: -90,
-
-
     },
     textStyle: {
         color: "white",
         fontWeight: "bold",
-        textAlign: "center"
+        textAlign: "center",
+        letterSpacing:2,
+        fontSize:16
     },
 
 })

@@ -4,7 +4,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const CategoryScreen = ({navigation}) => {
+const CategoryScreen = ({ navigation }) => {
 
     const Category = [
         {
@@ -69,11 +69,38 @@ const CategoryScreen = ({navigation}) => {
         },
     ]
 
+    const onPressCategory = (categorey) => {
+        if (categorey === 'Offer') {
+            navigation.navigate('MobileSale')
+        } else if (categorey === 'Grocery') {
+            navigation.navigate('MobileSale')
+        } else if (categorey === 'Mobile') {
+            navigation.navigate('MobileSale')
+        } else if (categorey === 'Fashion') {
+            navigation.navigate('MobileSale')
+        } else if (categorey === 'Home') {
+            navigation.navigate('MobileSale')
+        } else if (categorey === 'Toys') {
+            navigation.navigate('MobileSale')
+        } else if (categorey === 'Sports') {
+            navigation.navigate('MobileSale')
+        } else if (categorey === 'Medicine') {
+            navigation.navigate('MobileSale')
+        } else if (categorey === 'Appliance') {
+            navigation.navigate('MobileSale')
+        } else if (categorey === 'Beauty') {
+            navigation.navigate('MobileSale')
+        } else if (categorey === 'Furniture') {
+            navigation.navigate('MobileSale')
+        } else if (categorey === 'Gift') {
+            navigation.navigate('MobileSale')
+        }           
+    }
     const CategoryData = ({ item }) => {
-        // console.log("item");
+        console.log("item", item);
         return (
 
-            <TouchableOpacity style={styles.cardBox}>
+            <TouchableOpacity style={styles.cardBox} onPress={() => onPressCategory(item.product)}>
                 <View style={styles.imgCard}>
                     <Image source={item.image} style={styles.productImg} />
                 </View>
@@ -138,37 +165,37 @@ const CategoryScreen = ({navigation}) => {
             id: 1,
             image: require('../../../Resources/Images/handcraft.png'),
             detail: 'Samarth Craft',
-            text:"Handcarft, Art & more"
+            text: "Handcarft, Art & more"
         },
         {
             id: 2,
             image: require('../../../Resources/Images/winter.png'),
             detail: 'Happy Winter',
-            text:"Clothing, Decor & more"
+            text: "Clothing, Decor & more"
         },
         {
             id: 3,
             image: require('../../../Resources/Images/store.png'),
             detail: 'Big Store',
-            text:"Brand Across the world"
+            text: "Brand Across the world"
         },
         {
             id: 4,
             image: require('../../../Resources/Images/couple.png'),
             detail: 'Wedding Store',
-            text:"Lahenga, Saree & more"
+            text: "Lahenga, Saree & more"
         },
         {
             id: 5,
             image: require('../../../Resources/Images/suitcase.png'),
             detail: 'Travel Store',
-            text:"See the world with ease"
+            text: "See the world with ease"
         },
         {
             id: 6,
             image: require('../../../Resources/Images/lauch.png'),
             detail: 'Launch Hub',
-            text:"New Launching"
+            text: "New Launching"
         },
     ]
 
@@ -181,7 +208,7 @@ const CategoryScreen = ({navigation}) => {
                 </View>
                 <View style={styles.tradeDetail}>
                     <Text style={styles.tradeText}>{item.detail}</Text>
-                    <MaterialIcons name="navigate-next" size={30} color={"black"} style={styles.nextIcon}/>
+                    <MaterialIcons name="navigate-next" size={30} color={"black"} style={styles.nextIcon} />
                 </View>
                 <Text style={styles.detailText}>{item.text}</Text>
             </TouchableOpacity>
@@ -245,7 +272,7 @@ const CategoryScreen = ({navigation}) => {
                         keyExtractor={item => item.id}
                     />
                 </View>
-                
+
             </ScrollView>
         </View>
 

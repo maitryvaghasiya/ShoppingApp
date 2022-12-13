@@ -10,7 +10,9 @@ import { HomeScreenStack, CategoryStack, NotificationStack, AccountStack, CartSt
 const Tab = createBottomTabNavigator();
 
 function BottomTab() {
+
   return (
+    
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {

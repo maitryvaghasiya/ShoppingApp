@@ -55,7 +55,7 @@ const HomeScreen = ({ navigation }) => {
                         <Image source={item.image} style={styles.TopImg} />
                     </View>
                     <View>
-                        <Text style={styles.Imgtext}>{item.product} </Text>
+                        <Text style={[styles.Imgtext,{textAlign:"center"}]}>{item.product} </Text>
                     </View>
                 </TouchableOpacity>
             </View>
@@ -93,6 +93,7 @@ const HomeScreen = ({ navigation }) => {
             </TouchableOpacity>
         )
     }
+
     const images = [
         "https://www.creativefabrica.com/wp-content/uploads/2021/04/26/Creative-Fashion-Sale-Banner-Graphics-11345601-1-1-580x387.jpg",
         "https://www.excelebiz.in/wp-content/uploads/2018/05/banner-1024x427.jpg",
@@ -375,11 +376,11 @@ const HomeScreen = ({ navigation }) => {
             <View style={styles.offerBgBox}>
                 <TouchableOpacity style={styles.offerBox}>
                     <View>
-                        <Text style={styles.offerText}>Shop Before Sale Start</Text>
-                        <Text style={styles.offerText}>Lowest Prices of the Year!</Text>
+                        <Text style={[styles.offerText,{color:"#D1B015"}]}>Shop Before Sale Start</Text>
+                        <Text style={[styles.offerText,{color:"#D1B015"}]}>Lowest Prices of the Year!</Text>
                     </View>
                     <View>
-                        <AntDesign name='caretright' style={styles.nextIcon} />
+                        <AntDesign name='caretright' style={[styles.nextIcon,{color:"#D1B015"}]} />
                     </View>
                 </TouchableOpacity>
                 <FlatList
@@ -454,7 +455,6 @@ const HomeScreen = ({ navigation }) => {
         </ScrollView>
     )
 }
-
 
 export const ImageSlider = ({ images }) => {
 

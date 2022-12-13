@@ -9,29 +9,19 @@ const styles = StyleSheet.create({
     screen: {
         margin: 16,
         flex: 1,
-        // justifyContent: "center",
     },
     logoImg: {
         height: 100,
         width: 100,
         alignItems: "center",
         alignSelf: "center",
-        // position: "absolute",
-        // top: 150,
-        // flex: 1,
         marginTop: 50,
         marginBottom: 50
     },
     input: {
-        // height: 40,
-        // margin: 8,
         borderBottomWidth: 0.8,
         padding: 10,
         borderRadius: 10,
-        // color: "#A4A3A3"
-    },
-    forPassView: {
-        // position: "relative",
     },
     passwordBox: {
         flexDirection: "row",
@@ -83,9 +73,7 @@ const styles = StyleSheet.create({
         paddingBottom: 15,
         paddingRight: 30,
         paddingLeft: 30,
-        // marginTop:25,
         backgroundColor: "#047BD5",
-        // alignItems:"center",
         justifyContent: "center",
         alignSelf: "center",
         borderRadius: 10,
@@ -95,7 +83,9 @@ const styles = StyleSheet.create({
     textStyle: {
         color: "white",
         fontWeight: "bold",
-        textAlign: "center"
+        textAlign: "center",
+        fontSize:16,
+        letterSpacing:2
     },
     alreadyAcc: {
         flexDirection: 'row',
@@ -105,13 +95,11 @@ const styles = StyleSheet.create({
         bottom: -100,
     },
     SingUPText: {
-        color: '#9C9C9B',
+        color: '#585656',
     },
     SingUPText1: {
-
         fontSize: 15,
         color: "#047BD5"
-
     },
     head: {
         alignItems: "center",
@@ -119,17 +107,15 @@ const styles = StyleSheet.create({
         marginBottom: 30,
         flexDirection: "row",
         paddingLeft: 10
-
     },
     heading: {
         fontSize: 20,
-        letterSpacing: 3,
+        letterSpacing: 2,
         fontWeight: "900",
         color: "#047BD5",
-
     },
     backIcon: {
-        marginRight: 10
+        marginRight: 10,
     }
 })
 

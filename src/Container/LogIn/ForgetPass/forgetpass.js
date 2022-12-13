@@ -1,8 +1,6 @@
-import { View, Text, Image, ScrollView, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, TextInput, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-
-
 import styles from '../style';
 
 const ForgetPass = ({ navigation }) => {
@@ -16,7 +14,7 @@ const ForgetPass = ({ navigation }) => {
             <View style={styles.screen}>
                 <View style={styles.head}>
                     <TouchableOpacity onPress={() => { navigation.goBack()}}>
-                        <MaterialIcons name='arrow-back-ios' style={styles.backIcon} size={18} />
+                        <MaterialIcons name='arrow-back-ios' style={styles.backIcon} size={18} color={"#585656"}/>
                     </TouchableOpacity>
                     <Text style={styles.heading}>Forget Password</Text>
                 </View>
@@ -26,21 +24,23 @@ const ForgetPass = ({ navigation }) => {
                         onChangeText={setMobileNo}
                         value={mobileNo}
                         placeholder="Enter your Email-Id"
-                        placeholderTextColor="#FA4A3A3"
+                        placeholderTextColor="#585656"
                     />
                     <TextInput
                         style={styles.input}
                         onChangeText={setPassword}
                         value={password}
+                        secureTextEntry={true}
                         placeholder="Enter Password"
-                        placeholderTextColor="#FA4A3A3"
+                        placeholderTextColor="#585656"
                     />
                     <TextInput
                         style={styles.input}
                         onChangeText={setConPassword}
                         value={conPassword}
+                        secureTextEntry={true}
                         placeholder="Enter Confirm Password"
-                        placeholderTextColor="#FA4A3A3"
+                        placeholderTextColor="#585656"
                     />
                 </View>
                 <View>
