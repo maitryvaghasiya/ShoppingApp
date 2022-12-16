@@ -55,7 +55,7 @@ const HomeScreen = ({ navigation }) => {
                         <Image source={item.image} style={styles.TopImg} />
                     </View>
                     <View>
-                        <Text style={[styles.Imgtext,{textAlign:"center"}]}>{item.product} </Text>
+                        <Text style={[styles.Imgtext, { textAlign: "center" }]}>{item.product} </Text>
                     </View>
                 </TouchableOpacity>
             </View>
@@ -376,11 +376,11 @@ const HomeScreen = ({ navigation }) => {
             <View style={styles.offerBgBox}>
                 <TouchableOpacity style={styles.offerBox}>
                     <View>
-                        <Text style={[styles.offerText,{color:"#D1B015"}]}>Shop Before Sale Start</Text>
-                        <Text style={[styles.offerText,{color:"#D1B015"}]}>Lowest Prices of the Year!</Text>
+                        <Text style={[styles.offerText, { color: "#D1B015" }]}>Shop Before Sale Start</Text>
+                        <Text style={[styles.offerText, { color: "#D1B015" }]}>Lowest Prices of the Year!</Text>
                     </View>
                     <View>
-                        <AntDesign name='caretright' style={[styles.nextIcon,{color:"#D1B015"}]} />
+                        <AntDesign name='caretright' style={[styles.nextIcon, { color: "#D1B015" }]} />
                     </View>
                 </TouchableOpacity>
                 <FlatList

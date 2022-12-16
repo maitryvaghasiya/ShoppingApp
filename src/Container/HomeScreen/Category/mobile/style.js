@@ -133,22 +133,24 @@ const styles = StyleSheet.create({
         textShadowColor: 'rgba(0, 0, 0, 0.75)',
         // textShadowOffset: { width: -1, height: 1 },
         textShadowRadius: 20,
-        marginTop:8
+        marginTop: 8
     },
     topImgBox: {
-        height: 170,
-        width: 120,
-        marginLeft: 5,
-        marginRight: 5,
+        height: 173,
+        width: 140,
+        marginLeft: 10,
+        marginRight: 10,
         marginTop: 10,
-        marginBottom: 10,
+        marginBottom: 5,
         backgroundColor: "#fff",
         borderRadius: 10,
-        borderWidth:2,
+        borderWidth: 6,
+        borderBottomWidth: 2,
+        borderColor: "#047BD5",
     },
     imgTop: {
         height: 90,
-        width: "75%",
+        width: "60%",
         alignSelf: 'center',
         marginTop: 8
     },
@@ -166,8 +168,151 @@ const styles = StyleSheet.create({
         color: 'black',
         marginLeft: 10,
         fontWeight: "700",
-        fontSize:15
+        fontSize: 15
+    },
+    melaImgBox: {
+        height: 235,
+        width: "47%",
+        marginLeft: 5,
+        marginRight: 5,
+        marginTop: 10,
+        marginBottom: 5,
+        backgroundColor: "#fff",
+        borderRadius: 10,
+        borderWidth: 6,
+        borderBottomWidth: 2,
+        borderColor: "#047BD5",
+        paddingTop: 10
+    },
+    imgMela: {
+        height: 120,
+        width: "70%",
+        alignSelf: 'center',
+        marginBottom: 8
+    },
+    ImgtextPrime: {
+        color: '#047BD5',
+        marginLeft: 10,
+        fontWeight: "900",
+        fontSize: 16
+    },
+    textMob: {
+        color: "#000",
+        fontWeight: "800",
+        marginLeft: 10,
+        fontSize: 16
+    },
+    textDetail: {
+        color: "#585656",
+        marginLeft: 10,
+    },
+    flower: {
+        fontSize: 22,
+        marginTop: 12,
+        marginRight: 20,
+        marginLeft: 20
+    },
+    flowerBox: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        alignSelf: "center"
+    },
+    bigAds: {
+        width: "100%",
+        height: 160,
+        backgroundColor: "#047BD5",
+        marginTop: 10,
+        marginBottom: 5,
+        justifyContent: "center"
+    },
+    partAds: {
+        flexDirection: 'row',
+        justifyContent: "space-between"
+    },
+    mobileImg: {
+        height: 100,
+        width: 100,
+        position: "absolute",
+        right: 35,
+        top: 6
+    },
+    mobileBox: {
+        height: 110,
+        width: 110,
+        backgroundColor: "#fff",
+        opacity: 0.2,
+        position: "relative",
+        borderRadius: 10,
+        marginRight: 30,
+        zIndex: 1,
+    },
+    price: {
+        flexDirection: "row",
+    },
+    nameMob: {
+        color: "#fff",
+        fontWeight: "700",
+        fontSize: 20
+    },
+    mainPrice: {
+        color: "#fff",
+        marginTop: 5,
+        marginLeft: 10,
+        textDecorationLine: 'line-through',
+        fontWeight: "300"
+    },
+    detailMob: {
+        color: "#fff",
+        fontWeight: "300",
+        marginTop: 2
+    },
+    emiBox: {
+        width: 100,
+        backgroundColor: "#C8268D",
+        marginTop: 5,
+        borderRadius: 5,
+        padding: 3
+    },
+    pay: {
+        color: "#fff",
+        fontWeight: "300",
+    },
+    emiPay: {
+        color: "#fff",
+        fontWeight: "700",
+        fontSize: 16
+    },
+    realmeBox: {
+        padding: 5,
+        backgroundColor: "#D1B015",
+        justifyContent: "center",
+        alignItems: "center",
+        alignSelf: "center",
+        width: "30%",
+        marginRight: 10,
+        marginLeft: 10,
+    },
+    realmeMob: {
+        color: "#fff",
+        fontSize: 18,
+        fontWeight: "700",
+        marginRight: 10,
+        marginLeft: 10,
+    },
+    mainBox: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        alignSelf:"center",
+        marginTop:10
+    },
+    b2: {
+        borderWidth: 3,
+        width: '30%',
+        borderColor: '#047BD5',
+        borderRadius:3
     },
 })
-export default styles
+export default styles;
 
