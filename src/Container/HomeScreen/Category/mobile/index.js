@@ -389,7 +389,7 @@ const CategoryMobile = ({ navigation }) => {
         },
         {
             id: 3,
-            image: require('../../../../Resources/Images/m2.png'),
+            image: require('../../../../Resources/Images/m3.png'),
             mob: 'Realme 7A',
             details: "Smart.Powerful.Helpful",
             mobPrice: "From Rs.7999",
@@ -398,7 +398,7 @@ const CategoryMobile = ({ navigation }) => {
         },
         {
             id: 4,
-            image: require('../../../../Resources/Images/m6.png'),
+            image: require('../../../../Resources/Images/m5.png'),
             mob: 'Realme 11F',
             details: "Smart.Powerful.Helpful",
             mobPrice: "From Rs.9999",
@@ -464,6 +464,112 @@ const CategoryMobile = ({ navigation }) => {
     ]
 
     const RealmeMobile2Data = ({ item }) => {
+        return (
+            <TouchableOpacity style={[styles.topImgBox, { width: 120, marginLeft: 5, marginRight: 5, }]}>
+                <Image source={item.image} style={[styles.imgTop, { width: "75%" }]} />
+                <View style={[styles.b1, { borderColor: "#047BD5" }]}></View>
+                <Text style={styles.ImgtextMob}>{item.mob} </Text>
+                <Text style={styles.ImgtextMb}>{item.mobPrice} </Text>
+                <Text style={styles.priceMob}>{item.mPrice} </Text>
+            </TouchableOpacity>
+        )
+    }
+
+    const SamsungMobile1 = [
+        {
+            id: 1,
+            image: require('../../../../Resources/Images/m2.png'),
+            mob: 'Samsung 6A',
+            details: "Smart.Powerful.Helpful",
+            mobPrice: "From Rs.7999",
+            mPrice: "Rs.10999"
+
+        },
+        {
+            id: 2,
+            image: require('../../../../Resources/Images/m6.png'),
+            mob: 'Samsung 10A',
+            details: "Smart.Powerful.Helpful",
+            mobPrice: "From Rs.9999",
+            mPrice: "Rs.13000"
+        },
+        {
+            id: 3,
+            image: require('../../../../Resources/Images/m3.png'),
+            mob: 'Samsung 7A',
+            details: "Smart.Powerful.Helpful",
+            mobPrice: "From Rs.7999",
+            mPrice: "Rs.10999"
+
+        },
+        {
+            id: 4,
+            image: require('../../../../Resources/Images/m5.png'),
+            mob: 'Samsung 11F',
+            details: "Smart.Powerful.Helpful",
+            mobPrice: "From Rs.9999",
+            mPrice: "Rs.13000"
+        },
+    ]
+
+    const SamsungMobile1Data = ({ item }) => {
+        return (
+            <TouchableOpacity style={styles.melaImgBox}>
+                <Image source={item.image} style={styles.imgMela} />
+                <Text style={styles.textMob}>{item.mob} </Text>
+                <Text style={styles.textDetail}>{item.details} </Text>
+                <Text style={[styles.textMob, { fontSize: 17 }]}>{item.mobPrice} </Text>
+                <Text style={styles.priceMob}>{item.mPrice} </Text>
+            </TouchableOpacity>
+        )
+    }
+
+    const SamsungMobile2 = [
+        {
+            id: 1,
+            image: require('../../../../Resources/Images/m1.png'),
+            mob: 'Samsung A74',
+            mobPrice: "Rs.14999",
+            mPrice: "Rs.17000"
+        },
+        {
+            id: 2,
+            image: require('../../../../Resources/Images/m2.png'),
+            mob: 'Samsung 9R',
+            mobPrice: "Rs.29999",
+            mPrice: "Rs.35000"
+        },
+        {
+            id: 3,
+            image: require('../../../../Resources/Images/m3.png'),
+            mob: 'Samsung 10S',
+            mobPrice: "Rs.17999",
+            mPrice: "Rs.19000"
+        },
+        {
+            id: 4,
+            image: require('../../../../Resources/Images/m1.png'),
+            mob: 'Samsung 12',
+            mobPrice: "Rs.87999",
+            mPrice: "Rs.91000"
+        },
+        {
+            id: 5,
+            image: require('../../../../Resources/Images/m5.png'),
+            mob: 'Samsung Y21',
+            mobPrice: "Rs.20999",
+            mPrice: "Rs.23000"
+        },
+        {
+            id: 6,
+            image: require('../../../../Resources/Images/m6.png'),
+            mob: 'Samsung C35',
+            mobPrice: "Rs.17999",
+            mPrice: "Rs.20000"
+        },
+    ]
+
+    const SamsungMobile2Data = ({ item }) => {
         return (
             <TouchableOpacity style={[styles.topImgBox, { width: 120, marginLeft: 5, marginRight: 5, }]}>
                 <Image source={item.image} style={[styles.imgTop, { width: "75%" }]} />
@@ -645,19 +751,19 @@ const CategoryMobile = ({ navigation }) => {
                 <TouchableOpacity style={styles.bigAds}>
                     <View style={styles.partAds}>
                         <View style={{ marginLeft: 10 }}>
-                            <Text style={styles.nameMob}>iPhone 12 Pro</Text>
+                            <Text style={styles.nameMob}>MI 10i</Text>
                             <View style={styles.price}>
-                                <Text style={styles.nameMob}>From Rs.89,999*</Text>
-                                <Text style={styles.mainPrice}>Rs.1,09,999</Text>
+                                <Text style={styles.nameMob}>From Rs.17,999*</Text>
+                                <Text style={styles.mainPrice}>Rs.19,999</Text>
                             </View>
                             <Text style={styles.detailMob}>Simply Powerful | Super Helpful</Text>
                             <View style={styles.emiBox}>
                                 <Text style={styles.pay}>Pay Only</Text>
-                                <Text style={styles.emiPay}>Rs.10,799/m</Text>
+                                <Text style={styles.emiPay}>Rs.3,299/m</Text>
                             </View>
                         </View>
                         <View style={styles.mobileBox}></View>
-                        <Image source={Images.mobile2} style={styles.mobileImg} />
+                        <Image source={Images.mobile4} style={styles.mobileImg} />
                     </View>
                 </TouchableOpacity>
                 <View >
@@ -710,8 +816,8 @@ const CategoryMobile = ({ navigation }) => {
                         <View >
                             <FlatList
                                 numColumns={2}
-                                data={RealmeMobile1}
-                                renderItem={RealmeMobile1Data}
+                                data={SamsungMobile1}
+                                renderItem={SamsungMobile1Data}
                                 keyExtractor={item => item.id}
                             />
                         </View>
@@ -719,8 +825,8 @@ const CategoryMobile = ({ navigation }) => {
                             <FlatList
                                 horizontal
                                 showsHorizontalScrollIndicator={false}
-                                data={RealmeMobile2}
-                                renderItem={RealmeMobile2Data}
+                                data={SamsungMobile2}
+                                renderItem={SamsungMobile2Data}
                                 keyExtractor={item => item.id}
                             />
                         </View>

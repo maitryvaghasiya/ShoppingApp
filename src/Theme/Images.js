@@ -5,6 +5,7 @@ const Images ={
     mobile1 : require('../Resources/Images/m11.png'),
     mobile2 : require('../Resources/Images/m12.png'),
     mobile3 : require('../Resources/Images/m13.png'),
+    mobile4 : require('../Resources/Images/m14.png'),
     
 }
 

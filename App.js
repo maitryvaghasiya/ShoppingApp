@@ -8,9 +8,9 @@ export default function App() {
   return (
     <>
       <NavigationContainer>
-        {/* <LogInStack /> */}
+        <LogInStack />
         {/* <BottomTab /> */}
-        <CategoryMobile/>
+        {/* <CategoryMobile/> */}
 
       </NavigationContainer>
 
