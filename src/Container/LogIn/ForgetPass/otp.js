@@ -1,119 +1,5 @@
-// import { TouchableOpacity, Text, View, Alert, StyleSheet } from 'react-native';
-// import Ionicons from 'react-native-vector-icons/Ionicons';
-// import OTPTextView from 'react-native-otp-textinput';
-
-// const OtpScreen = ({ navigation }) => {
-
-//     state = {
-//         otpInput: '',
-//         inputText: '',
-//     };
-
-//     alertText = () => {
-//         const { otpInput = '' } = this.state;
-//         if (otpInput) {
-//             Alert.alert(otpInput);
-//         }
-//     };
-
-//     clear = () => {
-//         this.input1.clear();
-//     };
-
-//     updateOtpText = () => {
-//         this.input1.setValue(this.state.inputText);
-//     };
-
-//     return (
-//         <View style={styles.container}>
-//             <View>
-//                 <View>
-//                     <TouchableOpacity onPress={() => navigation.goBack()}>
-//                         < Ionicons name='ios-chevron-back' style={styles.backIcon} />
-//                     </TouchableOpacity>
-//                 </View>
-//                 <View>
-//                     <Text style={styles.head}>Enter your OTP</Text>
-//                 </View>
-//             </View>
-//             <View style={styles.Jcenter}>
-//                 <OTPTextView
-//                     handleTextChange={(e) => { }}
-//                     containerStyle={styles.textInputContainer}
-//                     textInputStyle={styles.roundedTextInput}
-//                     tintColor="#047BD5"
-//                     keyboardType="numeric"
-//                     inputCount={4}
-//                 />
-//             </View>
-//             <View style={styles.Jcenter}>
-//                 <TouchableOpacity onPress={() => navigation.navigate('LogInScrn')} >
-//                     <View style={styles.Button}>
-//                         <Text style={styles.BText}>Continue</Text>
-//                     </View>
-//                 </TouchableOpacity>
-//             </View>
-//         </View>
-//     );
-// }
-
-// const styles = StyleSheet.create({
-//     container: {
-//         margin: 16,
-//         flex: 1,
-//         padding: 5,
-//     },
-//     backIcon: {
-//         position: 'absolute',
-//         left: 0,
-//         fontSize: 30,
-//         color: 'black',
-//     },
-//     head: {
-//         color: '#047BD5',
-//         fontSize: 20,
-//         letterSpacing: 2,
-//         fontWeight: "700",
-//         marginBottom: 20,
-//         marginTop: 60,
-//         textAlign: 'center'
-//     },
-//     textInputContainer: {
-//         marginBottom: 20,
-//         marginTop: 50,
-//     },
-//     Jcenter: {
-//         justifyContent: 'center',
-//         alignItems: 'center'
-//     },
-//     roundedTextInput: {
-//         borderRadius: 10,
-//         borderWidth: 3,
-//     },
-//     Button: {
-//         paddingTop: 2,
-//         paddingBottom: 2,
-//         paddingRight: 90,
-//         paddingLeft: 90,
-//         backgroundColor: "#047BD5",
-//         justifyContent: "center",
-//         alignSelf: "center",
-//         borderRadius: 10,
-//         marginTop: 40
-//     },
-//     BText: {
-//         textAlign: 'center',
-//         marginVertical: 10,
-//         fontSize: 20,
-//         color: 'white'
-//     },
-// });
-
-// export default OtpScreen;
-
-
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button, Alert, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Alert, TouchableOpacity, StatusBar } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 import OTPTextView from 'react-native-otp-textinput';
@@ -142,7 +28,10 @@ export default class OtpScreen extends Component {
     render() {
         return (
             <View style={styles.container}>
-
+                <StatusBar
+                    animated={true}
+                    backgroundColor="#047BD5"
+                />
                 <View style={styles.screen}>
                     <View style={styles.head}>
                         <TouchableOpacity onPress={() => { this.props.navigation.goBack() }}>
@@ -257,6 +146,6 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: 'white',
         letterSpacing: 2,
-        fontWeight:"600"
+        fontWeight: "600"
     },
 });

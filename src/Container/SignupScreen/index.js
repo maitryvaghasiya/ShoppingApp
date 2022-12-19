@@ -1,9 +1,9 @@
-import { View, Text, ScrollView, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, ScrollView, TextInput, TouchableOpacity, StatusBar } from 'react-native'
 import React from 'react'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import styles from './style';
 
-const SignupScreen = ({navigation}) => {
+const SignupScreen = ({ navigation }) => {
 
     const [name, setName] = React.useState(null);
     const [mobileNo, setMobileNo] = React.useState(null);
@@ -13,9 +13,13 @@ const SignupScreen = ({navigation}) => {
 
     return (
         <View style={styles.container}>
+            <StatusBar
+                animated={true}
+                backgroundColor="#047BD5"
+            />
             <View style={styles.screen}>
                 <View style={styles.head}>
-                <TouchableOpacity onPress={() => { navigation.goBack()}}>
+                    <TouchableOpacity onPress={() => { navigation.goBack() }}>
                         <MaterialIcons name='arrow-back-ios' style={styles.backIcon} size={18} />
                     </TouchableOpacity>
                     <Text style={styles.heading}>Creat an Account</Text>

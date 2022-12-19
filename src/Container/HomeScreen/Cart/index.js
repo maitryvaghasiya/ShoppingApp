@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, TouchableOpacity, FlatList, Image } from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity, FlatList, Image, StatusBar } from 'react-native'
 import React from 'react'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Ionicons from 'react-native-vector-icons/Ionicons'
@@ -90,6 +90,10 @@ const CartScreen = () => {
 
     return (
         <View style={styles.container}>
+            <StatusBar
+                animated={true}
+                backgroundColor="#047BD5"
+            />
             <View style={styles.headName}>
                 <Text style={styles.headText}>My Cart</Text>
             </View>

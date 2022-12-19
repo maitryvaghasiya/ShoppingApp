@@ -202,7 +202,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 2,
             image: require('../../../../Resources/Images/m6.png'),
             mob: 'Vivo V21',
-            details: "Smart.Powerful.Helpful",
+            details: "50MP Dual Camera",
             mobPrice: "From Rs.40999",
             mPrice: "Rs.44000"
         },
@@ -210,7 +210,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 3,
             image: require('../../../../Resources/Images/m2.png'),
             mob: 'Samsung S21',
-            details: "Smart.Powerful.Helpful",
+            details: "Dual Recording Pro",
             mobPrice: "From Rs.89999",
             mPrice: "Rs.99000"
         },
@@ -218,7 +218,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 4,
             image: require('../../../../Resources/Images/m3.png'),
             mob: 'Poco F3',
-            details: "Smart.Powerful.Helpful",
+            details: "Thinnest & Lightest",
             mobPrice: "From Rs.21999",
             mPrice: "Rs.25000"
         },
@@ -326,7 +326,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 1,
             image: require('../../../../Resources/Images/m6.png'),
             mob: 'Vivo Y21',
-            details: "Smart.Powerful.Helpful",
+            details: "90Hz FHD+",
             mobPrice: "From Rs.13999",
             mPrice: "Rs.17000"
 
@@ -335,7 +335,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 2,
             image: require('../../../../Resources/Images/m1.png'),
             mob: 'Oppo V21',
-            details: "Smart.Powerful.Helpful",
+            details: "50MP AI Triple Cam",
             mobPrice: "From Rs.12999",
             mPrice: "Rs.16000"
         },
@@ -343,7 +343,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 3,
             image: require('../../../../Resources/Images/m2.png'),
             mob: 'Samsung J11',
-            details: "Smart.Powerful.Helpful",
+            details: "SD 695",
             mobPrice: "From Rs.11999",
             mPrice: "Rs.14000"
         },
@@ -351,7 +351,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 4,
             image: require('../../../../Resources/Images/m3.png'),
             mob: 'Oneplus Nord CE',
-            details: "Smart.Powerful.Helpful",
+            details: "In-screen Fingerprint",
             mobPrice: "From Rs.19999",
             mPrice: "Rs.22000"
         },
@@ -374,7 +374,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 1,
             image: require('../../../../Resources/Images/m2.png'),
             mob: 'Realme 6A',
-            details: "Smart.Powerful.Helpful",
+            details: "Boundless Sea Design",
             mobPrice: "From Rs.7999",
             mPrice: "Rs.10999"
 
@@ -383,7 +383,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 2,
             image: require('../../../../Resources/Images/m6.png'),
             mob: 'Realme 10A',
-            details: "Smart.Powerful.Helpful",
+            details: "6.4'' FHD+",
             mobPrice: "From Rs.9999",
             mPrice: "Rs.13000"
         },
@@ -391,7 +391,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 3,
             image: require('../../../../Resources/Images/m3.png'),
             mob: 'Realme 7A',
-            details: "Smart.Powerful.Helpful",
+            details: "Laser Light Design",
             mobPrice: "From Rs.7999",
             mPrice: "Rs.10999"
 
@@ -400,7 +400,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 4,
             image: require('../../../../Resources/Images/m5.png'),
             mob: 'Realme 11F',
-            details: "Smart.Powerful.Helpful",
+            details: "5000mAh",
             mobPrice: "From Rs.9999",
             mPrice: "Rs.13000"
         },
@@ -480,7 +480,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 1,
             image: require('../../../../Resources/Images/m2.png'),
             mob: 'Samsung 6A',
-            details: "Smart.Powerful.Helpful",
+            details: "SD 750G",
             mobPrice: "From Rs.7999",
             mPrice: "Rs.10999"
 
@@ -489,7 +489,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 2,
             image: require('../../../../Resources/Images/m6.png'),
             mob: 'Samsung 10A',
-            details: "Smart.Powerful.Helpful",
+            details: "Nightography",
             mobPrice: "From Rs.9999",
             mPrice: "Rs.13000"
         },
@@ -497,7 +497,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 3,
             image: require('../../../../Resources/Images/m3.png'),
             mob: 'Samsung 7A',
-            details: "Smart.Powerful.Helpful",
+            details: "5nm Processer",
             mobPrice: "From Rs.7999",
             mPrice: "Rs.10999"
 
@@ -506,7 +506,7 @@ const CategoryMobile = ({ navigation }) => {
             id: 4,
             image: require('../../../../Resources/Images/m5.png'),
             mob: 'Samsung 11F',
-            details: "Smart.Powerful.Helpful",
+            details: "64MP Triple Camera",
             mobPrice: "From Rs.9999",
             mPrice: "Rs.13000"
         },

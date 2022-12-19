@@ -1,4 +1,4 @@
-import { View, Text, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, TextInput, TouchableOpacity, StatusBar } from 'react-native'
 import React, { useState } from 'react'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import styles from '../style';
@@ -11,10 +11,14 @@ const ForgetPass = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
+            <StatusBar
+                animated={true}
+                backgroundColor="#047BD5"
+            />
             <View style={styles.screen}>
                 <View style={styles.head}>
-                    <TouchableOpacity onPress={() => { navigation.goBack()}}>
-                        <MaterialIcons name='arrow-back-ios' style={styles.backIcon} size={18} color={"#585656"}/>
+                    <TouchableOpacity onPress={() => { navigation.goBack() }}>
+                        <MaterialIcons name='arrow-back-ios' style={styles.backIcon} size={18} color={"#585656"} />
                     </TouchableOpacity>
                     <Text style={styles.heading}>Forget Password</Text>
                 </View>

@@ -1,4 +1,4 @@
-import { View, Text, Image, ScrollView, TextInput, TouchableOpacity } from 'react-native'
+import { View, Text, Image, ScrollView, TextInput, TouchableOpacity, StatusBar } from 'react-native'
 import React, { useState } from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -26,9 +26,12 @@ const LogInScreen = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
+            <StatusBar
+                animated={true}
+                backgroundColor="#047BD5"
+            />
             <View style={styles.screen}>
                 <Image source={Images.fliplogo} style={styles.logoImg} />
-
                 <View>
                     <TextInput
                         style={styles.input}
