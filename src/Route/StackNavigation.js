@@ -14,6 +14,7 @@ import CartScreen from '../Container/HomeScreen/Cart';
 import SearchScreen from '../Container/HomeScreen/SearchScreen';
 import CategoryMobile from '../Container/HomeScreen/Category/mobile';
 import BottomTab from './BottomNavigation';
+import CategoryHome from '../Container/HomeScreen/Category/home';
 
 const Stack = createNativeStackNavigator();
 
@@ -59,6 +60,7 @@ function CategoryStack() {
                 <Stack.Screen name="CategoryScrn" component={CategoryScreen} />
                 <Stack.Screen name="SearchScrn" component={SearchScreen} />
                 <Stack.Screen name="MobileSale" component={CategoryMobile} />
+                <Stack.Screen name="HomeSale" component={CategoryHome} />
             </Stack.Navigator>
         </NavigationContainer>
     );

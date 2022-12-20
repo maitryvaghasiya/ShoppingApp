@@ -79,7 +79,7 @@ const CategoryScreen = ({ navigation }) => {
         } else if (categorey === 'Fashion') {
             navigation.navigate('MobileSale')
         } else if (categorey === 'Home') {
-            navigation.navigate('MobileSale')
+            navigation.navigate('HomeSale')
         } else if (categorey === 'Toys') {
             navigation.navigate('MobileSale')
         } else if (categorey === 'Sports') {
