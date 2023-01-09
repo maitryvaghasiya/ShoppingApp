@@ -299,7 +299,7 @@ const styles = StyleSheet.create({
         height: 64,
         width: "100%",
         alignSelf: 'center',
-        borderRadius: 5,
+        borderRadius: 1,
 
     },
     img20Box: {

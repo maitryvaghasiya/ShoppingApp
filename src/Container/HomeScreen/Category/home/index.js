@@ -12,38 +12,38 @@ const CategoryHome = ({ navigation }) => {
     const OfferUpdate = [
         {
             id: 1,
-            image: require('../../../../Resources/Images/traditional.png'),
-            product: 'Indian Wear',
-            offeritem: "From Rs.199"
+            image: require('../../../../Resources/Images/cooker.png'),
+            product: 'Cookeware',
+            offeritem: "From Rs.899"
         },
         {
             id: 2,
-            image: require('../../../../Resources/Images/makeup.png'),
-            product: 'Beauty',
+            image: require('../../../../Resources/Images/pot.png'),
+            product: 'Flower Pot',
             offeritem: "30-70% Off"
         },
         {
             id: 3,
-            image: require('../../../../Resources/Images/garment.png'),
-            product: 'Wrangler',
+            image: require('../../../../Resources/Images/lamp.png'),
+            product: 'Night Lamp',
             offeritem: "Min.70% Off"
         },
         {
             id: 4,
-            image: require('../../../../Resources/Images/christmas.png'),
-            product: 'Christmas',
+            image: require('../../../../Resources/Images/ladder.png'),
+            product: 'Ladder',
             offeritem: "From Rs.99"
         },
         {
             id: 5,
-            image: require('../../../../Resources/Images/smartphone.png'),
-            product: 'Mobile',
-            offeritem: "0 Cost EMI>"
+            image: require('../../../../Resources/Images/blower.png'),
+            product: 'Dust Blower',
+            offeritem: "From Rs.299"
         },
         {
             id: 6,
-            image: require('../../../../Resources/Images/gadget.png'),
-            product: 'Electronics',
+            image: require('../../../../Resources/Images/jacket.png'),
+            product: 'Jackets',
             offeritem: "Up to 80% Off"
         },
     ]
@@ -62,49 +62,49 @@ const CategoryHome = ({ navigation }) => {
     const Category = [
         {
             id: 1,
-            image: require('../../../../Resources/Images/offer.png'),
+            image: require('../../../../Resources/Images/cooker.png'),
             start: "Extra 10% off",
             product: 'Cookeware',
         },
         {
             id: 2,
-            image: require('../../../../Resources/Images/grocery.png'),
+            image: require('../../../../Resources/Images/home1.png'),
             start: "From Rs.79",
             product: 'Home Furnishing',
         },
         {
             id: 3,
-            image: require('../../../../Resources/Images/mobile.png'),
+            image: require('../../../../Resources/Images/toolbox.png'),
             start: "From Rs.99",
             product: 'Accessories',
         },
         {
             id: 4,
-            image: require('../../../../Resources/Images/fashion.png'),
+            image: require('../../../../Resources/Images/frame.png'),
             start: "From Rs.59",
             product: 'Home Decor & More',
         },
         {
             id: 5,
-            image: require('../../../../Resources/Images/home.png'),
+            image: require('../../../../Resources/Images/bedsheet.jpeg'),
             start: "From Rs.129",
             product: 'Bedsheets & More',
         },
         {
             id: 6,
-            image: require('../../../../Resources/Images/toys.png'),
+            image: require('../../../../Resources/Images/cook.png'),
             start: "Extra 10% off",
             product: 'Healthy Cooking',
         },
         {
             id: 7,
-            image: require('../../../../Resources/Images/sports.png'),
+            image: require('../../../../Resources/Images/light.png'),
             start: "From Rs.199",
             product: 'Home Lighting',
         },
         {
             id: 8,
-            image: require('../../../../Resources/Images/medicine.png'),
+            image: require('../../../../Resources/Images/bath.png'),
             start: "From Rs.69",
             product: 'Bath & Kitchen',
         },
@@ -127,123 +127,54 @@ const CategoryHome = ({ navigation }) => {
         )
     }
 
-    const SamsungMobile2 = [
-        {
-            id: 1,
-            image: require('../../../../Resources/Images/m1.png'),
-            mob: 'Samsung A74',
-            mobPrice: "Rs.14999",
-            mPrice: "Rs.17000"
-        },
-        {
-            id: 2,
-            image: require('../../../../Resources/Images/m2.png'),
-            mob: 'Samsung 9R',
-            mobPrice: "Rs.29999",
-            mPrice: "Rs.35000"
-        },
-        {
-            id: 3,
-            image: require('../../../../Resources/Images/m3.png'),
-            mob: 'Samsung 10S',
-            mobPrice: "Rs.17999",
-            mPrice: "Rs.19000"
-        },
-        {
-            id: 4,
-            image: require('../../../../Resources/Images/m1.png'),
-            mob: 'Samsung 12',
-            mobPrice: "Rs.87999",
-            mPrice: "Rs.91000"
-        },
-        {
-            id: 5,
-            image: require('../../../../Resources/Images/m5.png'),
-            mob: 'Samsung Y21',
-            mobPrice: "Rs.20999",
-            mPrice: "Rs.23000"
-        },
-        {
-            id: 6,
-            image: require('../../../../Resources/Images/m6.png'),
-            mob: 'Samsung C35',
-            mobPrice: "Rs.17999",
-            mPrice: "Rs.20000"
-        },
-    ]
-
-    const SamsungMobile2Data = ({ item }) => {
-        return (
-            <TouchableOpacity style={[styles.topImgBox, { width: 120, marginLeft: 5, marginRight: 5, }]}>
-                <Image source={item.image} style={[styles.imgTop, { width: "75%" }]} />
-                <View style={[styles.b1, { borderColor: "#047BD5" }]}></View>
-                <Text style={styles.ImgtextMob}>{item.mob} </Text>
-                <Text style={styles.ImgtextMb}>{item.mobPrice} </Text>
-                <Text style={styles.priceMob}>{item.mPrice} </Text>
-            </TouchableOpacity>
-        )
-    }
-
     const Top = [
         {
             id: 1,
-            image: require('../../../../Resources/Images/bedsheet.jpeg'),
-            product: 'Boat SmartWatch',
-            offeritem: "Most-Loved"
+            image: require('../../../../Resources/Images/cookware.jpeg'),
+            product: 'Kitchen Set',
+            offeritem: "From Rs.49"
         },
         {
             id: 2,
-            image: require('../../../../Resources/Images/bedsheet.jpeg'),
-            product: 'Hair Wig',
-            offeritem: "New Range"
+            image: require('../../../../Resources/Images/bath1.jpeg'),
+            product: 'Bathroom Accessories',
+            offeritem: "Up to 70% off"
         },
         {
             id: 3,
-            image: require('../../../../Resources/Images/bedsheet.jpeg'),
-            product: 'Men-s Jeans',
-            offeritem: "Top Collection"
+            image: require('../../../../Resources/Images/cook1.webp'),
+            product: 'Kitchen Essentials',
+            offeritem: "From Rs.89"
         },
         {
             id: 4,
             image: require('../../../../Resources/Images/bedsheet.jpeg'),
-            product: 'Roll-ons',
-            offeritem: "Widest Range"
+            product: 'Double Bedsheet',
+            offeritem: "Under Rs.349"
         },
         {
             id: 5,
-            image: require('../../../../Resources/Images/bedsheet.jpeg'),
-            product: 'Boat SmartWatch',
-            offeritem: "Most-Loved"
+            image: require('../../../../Resources/Images/towel.jpeg'),
+            product: 'Bath Towels',
+            offeritem: "From Rs.189"
         },
         {
             id: 6,
-            image: require('../../../../Resources/Images/bedsheet.jpeg'),
-            product: 'Hair Wig',
-            offeritem: "New Range"
+            image: require('../../../../Resources/Images/pan.jpeg'),
+            product: 'Pan & Tawa',
+            offeritem: "Under Rs,599"
         },
         {
             id: 7,
-            image: require('../../../../Resources/Images/bedsheet.jpeg'),
-            product: 'Men-s Jeans',
+            image: require('../../../../Resources/Images/paint.jpeg'),
+            product: 'Painting, Poster',
             offeritem: "Top Collection"
         },
         {
             id: 8,
-            image: require('../../../../Resources/Images/bedsheet.jpeg'),
-            product: 'Roll-ons',
-            offeritem: "Widest Range"
-        },
-        {
-            id: 9,
-            image: require('../../../../Resources/Images/bedsheet.jpeg'),
-            product: 'Men-s Jeans',
-            offeritem: "Top Collection"
-        },
-        {
-            id: 10,
-            image: require('../../../../Resources/Images/bedsheet.jpeg'),
-            product: 'Roll-ons',
-            offeritem: "Widest Range"
+            image: require('../../../../Resources/Images/solar.jpeg'),
+            product: 'Solar Battery',
+            offeritem: "Up to 70% off"
         },
     ]
 
@@ -263,113 +194,113 @@ const CategoryHome = ({ navigation }) => {
         {
             id: 1,
             image: require('../../../../Resources/Images/lunch.jpeg'),
-            mob: 'Samsung A74',
-            mobPrice: "Rs.14999",
+            mob: 'LunchBox',
+            mobPrice: "From Rs.129",
 
         },
         {
             id: 2,
             image: require('../../../../Resources/Images/pillow.jpeg'),
-            mob: 'Samsung 9R',
-            mobPrice: "Rs.29999",
+            mob: 'Pillow',
+            mobPrice: "Under Rs.399",
 
         },
         {
             id: 3,
-            image: require('../../../../Resources/Images/m3.png'),
-            mob: 'Samsung 10S',
-            mobPrice: "Rs.17999",
+            image: require('../../../../Resources/Images/tap.jpeg'),
+            mob: 'Faucets',
+            mobPrice: "From Rs.229",
 
         },
         {
             id: 4,
-            image: require('../../../../Resources/Images/m1.png'),
-            mob: 'Samsung 12',
-            mobPrice: "Rs.87999",
+            image: require('../../../../Resources/Images/light.webp'),
+            mob: 'Lighting',
+            mobPrice: "Up to 80% off",
 
         },
         {
             id: 5,
-            image: require('../../../../Resources/Images/m5.png'),
-            mob: 'Samsung Y21',
-            mobPrice: "Rs.20999",
+            image: require('../../../../Resources/Images/cover.jpeg'),
+            mob: 'Covers',
+            mobPrice: "From Rs.79",
 
         },
         {
             id: 6,
-            image: require('../../../../Resources/Images/m6.png'),
-            mob: 'Samsung C35',
-            mobPrice: "Rs.17999",
+            image: require('../../../../Resources/Images/plant.jpeg'),
+            mob: 'Plants',
+            mobPrice: "From Rs.99",
 
         },
         {
             id: 7,
-            image: require('../../../../Resources/Images/m1.png'),
-            mob: 'Samsung A74',
-            mobPrice: "Rs.14999",
+            image: require('../../../../Resources/Images/condiment.jpeg'),
+            mob: 'Condiment',
+            mobPrice: "From Rs.98",
 
         },
         {
             id: 8,
-            image: require('../../../../Resources/Images/m2.png'),
-            mob: 'Samsung 9R',
-            mobPrice: "Rs.29999",
+            image: require('../../../../Resources/Images/frame1.jpeg'),
+            mob: 'Frames',
+            mobPrice: "Up to 80% off",
 
         },
         {
             id: 9,
-            image: require('../../../../Resources/Images/m3.png'),
-            mob: 'Samsung 10S',
-            mobPrice: "Rs.17999",
+            image: require('../../../../Resources/Images/bottle.jpeg'),
+            mob: 'Flasks',
+            mobPrice: "From Rs.429",
 
         },
         {
             id: 10,
-            image: require('../../../../Resources/Images/m1.png'),
-            mob: 'Samsung 12',
-            mobPrice: "Rs.87999",
+            image: require('../../../../Resources/Images/tool.jpeg'),
+            mob: 'Tools',
+            mobPrice: "From Rs.49",
 
         },
         {
             id: 11,
-            image: require('../../../../Resources/Images/m5.png'),
-            mob: 'Samsung Y21',
-            mobPrice: "Rs.20999",
+            image: require('../../../../Resources/Images/towel.jpeg'),
+            mob: 'Towels',
+            mobPrice: "From Rs.99",
 
         },
         {
             id: 12,
-            image: require('../../../../Resources/Images/m6.png'),
-            mob: 'Samsung C35',
-            mobPrice: "Rs.17999",
+            image: require('../../../../Resources/Images/stand.webp'),
+            mob: 'Dryer',
+            mobPrice: "Up to 75% off",
 
         },
         {
             id: 13,
-            image: require('../../../../Resources/Images/m1.png'),
-            mob: 'Samsung A74',
-            mobPrice: "Rs.14999",
+            image: require('../../../../Resources/Images/bare.jpeg'),
+            mob: 'Bareware',
+            mobPrice: "Up to 60% off",
 
         },
         {
             id: 14,
-            image: require('../../../../Resources/Images/m2.png'),
-            mob: 'Samsung 9R',
-            mobPrice: "Rs.29999",
+            image: require('../../../../Resources/Images/mug.jpeg'),
+            mob: 'Mugs',
+            mobPrice: "From Rs.129",
 
         },
         {
             id: 15,
-            image: require('../../../../Resources/Images/m3.png'),
-            mob: 'Samsung 10S',
-            mobPrice: "Rs.17999",
+            image: require('../../../../Resources/Images/screw.jpeg'),
+            mob: 'Screwdrive',
+            mobPrice: "From Rs.90",
 
         },
         {
             id: 16,
-            image: require('../../../../Resources/Images/m1.png'),
-            mob: 'Samsung 12',
-            mobPrice: "Rs.87999",
+            image: require('../../../../Resources/Images/wall.jpeg'),
+            mob: 'Wall Decor',
+            mobPrice: "Up to 80% off",
 
         },
     ]
@@ -389,26 +320,26 @@ const CategoryHome = ({ navigation }) => {
     const CrazyDeal = [
         {
             id: 1,
-            image: require('../../../../Resources/Images/bedsheet.jpeg'),
-            product: 'Boat SmartWatch',
+            image: require('../../../../Resources/Images/condiment.jpeg'),
+            product: 'Condiment',
             offeritem: "Most-Loved"
         },
         {
             id: 2,
-            image: require('../../../../Resources/Images/bedsheet.jpeg'),
-            product: 'Hair Wig',
+            image: require('../../../../Resources/Images/bottle.jpeg'),
+            product: 'Water Bottle',
             offeritem: "New Range"
         },
         {
             id: 3,
-            image: require('../../../../Resources/Images/bedsheet.jpeg'),
-            product: 'Men-s Jeans',
+            image: require('../../../../Resources/Images/mug.jpeg'),
+            product: 'Coffee Mugs',
             offeritem: "Top Collection"
         },
         {
             id: 4,
-            image: require('../../../../Resources/Images/bedsheet.jpeg'),
-            product: 'Roll-ons',
+            image: require('../../../../Resources/Images/light.webp'),
+            product: 'Lighting',
             offeritem: "Widest Range"
         },
     ]
@@ -510,23 +441,6 @@ const CategoryHome = ({ navigation }) => {
                     </View>
                 </TouchableOpacity>
 
-                <View>
-                    <View style={styles.headBox}>
-
-                        <Text style={styles.headMob}>HAR DIN UTSAV DEALS</Text>
-                        <Text style={styles.headTextMob}>Refresh Every 1 Hour</Text>
-
-                    </View>
-                    <View >
-                        <FlatList
-                            horizontal
-                            showsHorizontalScrollIndicator={false}
-                            data={SamsungMobile2}
-                            renderItem={SamsungMobile2Data}
-                            keyExtractor={item => item.id}
-                        />
-                    </View>
-                </View>
                 <View>
                     <View style={styles.headBox}>
 

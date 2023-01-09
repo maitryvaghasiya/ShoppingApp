@@ -80,6 +80,15 @@ const styles = StyleSheet.create({
         position: "absolute",
         bottom: -70,
     },
+    button1: {
+        borderRadius: 2,
+        backgroundColor: "#047BD5",
+        justifyContent: "center",
+        alignSelf: "center",
+        position: "absolute",
+        bottom: -180,
+        color:"#000"
+    },
     textStyle: {
         color: "white",
         fontWeight: "bold",

@@ -1,12 +1,84 @@
-import { View, Text, Image, ScrollView, TextInput, TouchableOpacity, StatusBar } from 'react-native'
-import React, { useState } from 'react'
+import { View, Text, Image, ScrollView, TextInput, TouchableOpacity, StatusBar, Button } from 'react-native'
+import React, { useEffect, useState } from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import styles from './style';
 import Images from '../../Theme/Images';
+import { GoogleSignin } from '@react-native-google-signin/google-signin';
+import auth from '@react-native-firebase/auth';
+import crashlytics from '@react-native-firebase/crashlytics';
+
+async function onSignIn(user) {
+    crashlytics().log('User signed in.');
+    await Promise.all([
+      crashlytics().setUserId(user.uid),
+      crashlytics().setAttribute('credits', String(user.credits)),
+      crashlytics().setAttributes({
+        role: 'admin',
+        followers: '13',
+        email: user.email,
+        username: user.username,
+      }),
+    ]);
+  }
 
 const LogInScreen = ({ navigation }) => {
+
+    useEffect(() => {
+        crashlytics().log('App mounted.');
+      }, []);
+
+    // GoogleSignin.configure({
+    //     webClientId: '953354705819-nvengrk20ip36ldpoe0iau37afuld2mt.apps.googleusercontent.com',
+    // });
+
+    // const onGoogleButtonPress = async () => {
+    //     // Check if your device supports Google Play
+    //     // await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+    //     // Get the users ID token
+    //     const { idToken } = await GoogleSignin.signIn();
+
+    //     // Create a Google credential with the token
+    //     const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+
+    //     // Sign-in the user with the credential
+    //     const user_log_in = auth().signInWithCredential(googleCredential);
+
+    //     user_log_in.then((user) => {
+    //         console.log(user);
+    //     })
+    //         .catch((error) => {
+    //             console.log((error));
+    //         })
+
+    // }
+    GoogleSignin.configure({
+        webClientId: '953354705819-nvengrk20ip36ldpoe0iau37afuld2mt.apps.googleusercontent.com',
+    });
+
+    const googleLogin = async () => {
+        try {
+            await GoogleSignin.hasPlayServices();
+            await GoogleSignin.signOut();
+            const userInfo = await GoogleSignin.signIn();
+            console.log("user info is here ", userInfo)
+        } catch (error) {
+            if (error.code === statusCodes.SIGN_IN_CANCELLED) {
+                // user cancelled the login flow
+                console.log(error)
+            } else if (error.code === statusCodes.IN_PROGRESS) {
+                // operation (e.g. sign in) is in progress already
+                console.log(error)
+            } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
+                // play services not available or outdated
+                console.log(error)
+            } else {
+                // some other error happened
+                console.log(error)
+            }
+        }
+    }
 
     const [email, setEmail] = React.useState(null);
     const [password, setPassword] = React.useState(null);
@@ -74,9 +146,16 @@ const LogInScreen = ({ navigation }) => {
                     </View>
                     <View style={styles.IconsBox}>
                         <View>
-                            <TouchableOpacity >
+                            {/* <TouchableOpacity
+                                // onPress={() => onGoogleButtonPress().then(() => console.log('Signed in with Google!'))}
+                                onPress={onGoogleButtonPress}
+                            >
                                 <AntDesign name='google' style={styles.googleIcon} />
-                            </TouchableOpacity>
+                            </TouchableOpacity> */}
+                            <Button
+                                title='google'
+                                onPress={googleLogin}
+                            />
                         </View>
                     </View>
                     <TouchableOpacity
@@ -85,6 +164,7 @@ const LogInScreen = ({ navigation }) => {
                     >
                         <Text style={styles.textStyle}>Log In</Text>
                     </TouchableOpacity>
+
                     <View style={styles.alreadyAcc}>
                         <Text style={styles.SingUPText}>Didn’t have any account?</Text>
                         <TouchableOpacity
@@ -93,7 +173,17 @@ const LogInScreen = ({ navigation }) => {
                             <Text style={styles.SingUPText1}>  Sign up</Text>
                         </TouchableOpacity>
                     </View>
+                    <View>
+                        <TouchableOpacity
+                            style={styles.button1}
+                            onPress={() => crashlytics().crash()}
+                        >
+                            <Text>TestCrash</Text>
+                        </TouchableOpacity>
+                    </View>
+
                 </View>
+
             </View>
         </View >
     )
