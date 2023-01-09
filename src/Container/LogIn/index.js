@@ -146,16 +146,16 @@ const LogInScreen = ({ navigation }) => {
                     </View>
                     <View style={styles.IconsBox}>
                         <View>
-                            {/* <TouchableOpacity
+                            <TouchableOpacity
                                 // onPress={() => onGoogleButtonPress().then(() => console.log('Signed in with Google!'))}
-                                onPress={onGoogleButtonPress}
+                                onPress={googleLogin}
                             >
                                 <AntDesign name='google' style={styles.googleIcon} />
-                            </TouchableOpacity> */}
-                            <Button
+                            </TouchableOpacity>
+                            {/* <Button
                                 title='google'
                                 onPress={googleLogin}
-                            />
+                            /> */}
                         </View>
                     </View>
                     <TouchableOpacity
