@@ -2,6 +2,8 @@ import { View, Text, ScrollView, TextInput, TouchableOpacity, StatusBar } from '
 import React from 'react'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import styles from './style';
+import { useDispatch, useSelector } from 'react-redux';
+import { signupUser } from '../../Redux/action/authAction';
 
 const SignupScreen = ({ navigation }) => {
 
@@ -10,6 +12,12 @@ const SignupScreen = ({ navigation }) => {
     const [email, setEmail] = React.useState(null);
     const [password, setPassword] = React.useState(null);
     const [conPassword, setConPassword] = React.useState(null);
+
+    const dispatch = useDispatch();
+
+    const handleSignup = () => {
+        dispatch(signupUser({ name, mobileNo, email, password, conPassword }))
+    }
 
     return (
         <View style={styles.container}>
@@ -64,9 +72,14 @@ const SignupScreen = ({ navigation }) => {
                 <View>
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={() => navigation.navigate('OtpScrn')}
+                        onPress={() => { handleSignup() }}
                     >
-                        <Text style={styles.textStyle}>Send Otp</Text>
+                        <Text style={styles.textStyle}>Verify</Text>
+                    </TouchableOpacity>
+                </View>
+                <View style={{ alignItems: "center", marginTop: 100 }}>
+                    <TouchableOpacity onPress={() => { navigation.navigate("LogInScrn") }}>
+                        <Text style={{ color: "#047BD5" }}>Log In</Text>
                     </TouchableOpacity>
                 </View>
             </View>

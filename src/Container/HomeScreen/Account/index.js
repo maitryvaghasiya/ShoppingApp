@@ -7,8 +7,15 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useDispatch } from 'react-redux'
+import { LogOut } from "../../../Redux/action/authAction";
 
 const AccountScreen = ({ navigation }) => {
+
+  const dispatch = useDispatch()
+  const handleLogOut = () => {
+    dispatch(LogOut())
+  }
 
   const Option = [
     {
@@ -202,7 +209,7 @@ const AccountScreen = ({ navigation }) => {
       <ScrollView style={styles.screen}>
         <View>
           <FlatList
-          showsVerticalScrollIndicator={false}
+            showsVerticalScrollIndicator={false}
             numColumns={2}
             data={Option}
             renderItem={OptionData}
@@ -268,7 +275,7 @@ const AccountScreen = ({ navigation }) => {
 
         <View style={styles.border}></View>
 
-        <TouchableOpacity style={styles.OutBtn}>
+        <TouchableOpacity style={styles.OutBtn} onPress={() => {handleLogOut()}}>
           <View style={styles.logOutBtn}>
             <Text style={styles.logOutText}>Log Out</Text>
           </View>

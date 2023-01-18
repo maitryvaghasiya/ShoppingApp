@@ -6,28 +6,31 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import styles from './style';
 import Images from '../../Theme/Images';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
-import auth from '@react-native-firebase/auth';
 import crashlytics from '@react-native-firebase/crashlytics';
+import { useDispatch, useSelector } from 'react-redux';
+import { LoginUser } from '../../Redux/action/authAction';
 
 async function onSignIn(user) {
     crashlytics().log('User signed in.');
     await Promise.all([
-      crashlytics().setUserId(user.uid),
-      crashlytics().setAttribute('credits', String(user.credits)),
-      crashlytics().setAttributes({
-        role: 'admin',
-        followers: '13',
-        email: user.email,
-        username: user.username,
-      }),
+        crashlytics().setUserId(user.uid),
+        crashlytics().setAttribute('credits', String(user.credits)),
+        crashlytics().setAttributes({
+            role: 'admin',
+            followers: '13',
+            email: user.email,
+            username: user.username,
+        }),
     ]);
-  }
+}
 
 const LogInScreen = ({ navigation }) => {
 
+
+
     useEffect(() => {
         crashlytics().log('App mounted.');
-      }, []);
+    }, []);
 
     // GoogleSignin.configure({
     //     webClientId: '953354705819-nvengrk20ip36ldpoe0iau37afuld2mt.apps.googleusercontent.com',
@@ -80,8 +83,14 @@ const LogInScreen = ({ navigation }) => {
         }
     }
 
-    const [email, setEmail] = React.useState(null);
-    const [password, setPassword] = React.useState(null);
+    const [email, setEmail] = useState(null);
+    const [password, setPassword] = useState(null);
+
+    const dispatch = useDispatch();
+
+    const handleSignIn = () => {
+        dispatch(LoginUser({ email, password }))
+    }
 
     const [passwordVisibility, setPasswordVisibility] = useState(true);
     const [rightIcon, setRightIcon] = useState('eye');
@@ -152,15 +161,11 @@ const LogInScreen = ({ navigation }) => {
                             >
                                 <AntDesign name='google' style={styles.googleIcon} />
                             </TouchableOpacity>
-                            {/* <Button
-                                title='google'
-                                onPress={googleLogin}
-                            /> */}
                         </View>
                     </View>
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={() => navigation.navigate('Home1')}
+                        onPress={()=>{handleSignIn()}}
                     >
                         <Text style={styles.textStyle}>Log In</Text>
                     </TouchableOpacity>
