@@ -214,7 +214,7 @@ const CategoryHome = ({ navigation }) => {
         },
         {
             id: 4,
-            image: require('../../../../Resources/Images/light.webp'),
+            image: require('../../../../Resources/Images/light1.webp'),
             mob: 'Lighting',
             mobPrice: "Up to 80% off",
 
@@ -338,7 +338,7 @@ const CategoryHome = ({ navigation }) => {
         },
         {
             id: 4,
-            image: require('../../../../Resources/Images/light.webp'),
+            image: require('../../../../Resources/Images/light1.webp'),
             product: 'Lighting',
             offeritem: "Widest Range"
         },
